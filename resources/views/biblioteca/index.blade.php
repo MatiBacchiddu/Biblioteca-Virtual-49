@@ -66,7 +66,7 @@
                           <div class="badges">
                             <span class="badge badge-info">React</span>
                           </div>
-                          <p class="card-text">Entra aqui para poder ver la bibliografia de esta materia</p>
+                          <a class="card-text">Entra aqui para poder ver la bibliografia de esta materia</a>
                         </div>
                       </div>
                 </div>
