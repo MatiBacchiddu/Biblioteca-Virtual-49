@@ -7,6 +7,14 @@ use Illuminate\Http\Request;
 
 class NovedadesController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware('auth'); // proteger autenticacion
+    }
+
+
+
     /**
      * Display a listing of the resource.
      *

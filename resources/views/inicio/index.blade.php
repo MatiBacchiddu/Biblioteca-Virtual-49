@@ -16,6 +16,7 @@
         <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
+        <link rel="stylesheet" href="{{asset('css/matiestilos.css')}}">
     </head>
     <body id="page-top">
         <!-- Navigation-->
@@ -65,7 +66,6 @@
         {{--Cierre de historia escolar---}}
 
         {{--Novedades--}}
-
         <section class="page-section bg-light" id="novedades">
             <div class="container">
                 <div class="text-center">
@@ -137,7 +137,7 @@
 
         <!-- Contacto-->
 
-        <section class="page-section" id="contacto">
+        <section class="page-section box-mati" id="contacto">
             <div class="container">
                 <div class="text-center">
                     <h2 class="section-heading text-uppercase">Contactanos</h2>
@@ -161,7 +161,7 @@
 
 
         <!-- Footer-->
-        <footer class="footer py-4">
+        <footer class="footer py-4 mt-6 w-100 footer-mati">
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-lg-4 text-lg-left">Copyright © Escuela Secundaria N*49 2020 </div>
