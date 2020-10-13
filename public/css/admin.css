@@ -1,0 +1,8 @@
+.user-panel>.info{
+    position: relative;
+    left: auto;
+}
+
+.login-page .main-footer{
+    display: none;
+}
