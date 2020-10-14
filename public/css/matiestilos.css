@@ -26,3 +26,14 @@
 .font-mati {
     font-size: 0.9rem;
 }
+
+.hr-contenidos {
+    border: 1px solid #540b0e;
+    padding: 0.1rem;
+    background-color: #540b0e;
+    border-radius: 50px;
+}
+
+.hr-contenido {
+    border: 1px solid #540b0e;
+}

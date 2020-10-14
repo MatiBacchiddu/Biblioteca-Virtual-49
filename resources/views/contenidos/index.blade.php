@@ -40,7 +40,7 @@
                     <li class="nav-item active">
                     <a class="nav-link hover" href="{{url('/')}}"><i class="fas fa-arrow-left flecha"></i> Volver al Inicio <span class="sr-only">(current)</span></a>
                     </li>
-                    <a class="active  btn btn-outline-danger ml-5" href="{{url('/')}}">Materias<span class="sr-only">(current)</span></a>
+                    <a class="active nav-link ml-5" href="{{url('/')}}">Materias<span class="sr-only">(current)</span></a>
                 </ul>
             </div>
         </div>
@@ -54,6 +54,7 @@
             <div class="row">
                 <div class="col text-center text-uppercase">
                     <h2>Aqui encontraras los contenidos necesarios</h2>
+                    <hr class="hr-contenidos">
                 </div>
             </div>
             <div class="row">
@@ -63,9 +64,9 @@
                         <div class="card-body">
                           <h5 class="card-title text-uppercase font-weight-bold">{{$contenido->nombre}}</h5>
                           <p>Para: {{$contenido->año}}</p>
-                          <a href="/storage/{{$contenido->archivo}}" download="{{$contenido->nombre}}.pdf" class="btn btn-outline-danger">Descargar PDF</a>
+                          <a href="/storage/{{$contenido->archivo}}" download="{{$contenido->nombre}}.pdf" class="btn btn-outline-danger"><i class="fas fa-download"></i> Descargar PDF</a>
                           <br>
-                          <a href="/storage/{{$contenido->archivo}}" class="btn btn-outline-danger mt-4" target="_blank">Ver PDF</a>
+                          <a href="/storage/{{$contenido->archivo}}" class="btn btn-outline-danger mt-4" target="_blank"><i class="fas fa-eye"></i> Ver PDF</a>
                           <p><span class="badge badge-danger font-mati mt-4">{{$contenido->materia->nombre}}</span></p>
                         </div>
                       </div>
