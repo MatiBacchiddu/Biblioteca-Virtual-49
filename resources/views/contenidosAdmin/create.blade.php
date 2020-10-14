@@ -189,7 +189,7 @@
       </div><!-- /.container-fluid -->
     </section>
 
-    <h1 class="text-center"> Crear una nueva novedad </h1>
+    <h1 class="text-center"> Sube un nuevo Contenido </h1>
     <!-- Main content -->
     <form
     action ="{{route('novedades.store')}}"
@@ -198,7 +198,7 @@
 
     @csrf
         <div class="form-group ml-5">
-          <label for="titulo">Titulo</label>
+          <label for="titulo">Nombre del contenido</label>
           <input type="text" name="titulo" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
 
         </div>
