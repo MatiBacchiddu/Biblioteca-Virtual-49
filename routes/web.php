@@ -33,6 +33,7 @@ Route::delete('/novedades/{novedad}', 'NovedadesController@destroy')->name('nove
 
 // admin contenidos
 Route::get('/admin/contenidos', 'ContenidosAdminController@create')->name('contenidosAdmin.create');
+Route::post('contenidosAdmin', 'ContenidosAdminController@store')->name('contenidosAdmin.store');
 
 Auth::routes();
 

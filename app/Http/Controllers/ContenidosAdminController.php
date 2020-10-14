@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Materia;
 use App\ContenidosAdmin;
 use Illuminate\Http\Request;
 
@@ -26,7 +27,10 @@ class ContenidosAdminController extends Controller
     public function create()
     {
         //
-        return view('contenidosAdmin.create');
+
+        $materias = Materia::all();
+
+        return view('contenidosAdmin.create')->with('materias', $materias);
     }
 
     /**
@@ -38,6 +42,16 @@ class ContenidosAdminController extends Controller
     public function store(Request $request)
     {
         //
+
+        $data = $request->validate([
+            'nombre' => 'required',
+            'años' => 'required',
+            'archivo' => 'required',
+            'materia' => 'required'
+        ]);
+
+
+
     }
 
     /**

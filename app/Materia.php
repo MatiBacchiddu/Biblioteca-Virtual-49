@@ -7,4 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 class Materia extends Model
 {
     //
+
+    public function contenido()
+    {
+        return $this->hasMany(ContenidosAdmin::class);
+    }
 }
