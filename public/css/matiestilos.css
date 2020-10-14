@@ -17,13 +17,12 @@
     margin-left: 1rem;
 }
 
-body {
-    background-color: #e9ecef;
-}
 
 .card-mati {
-    border: 1px solid black ;
-    border-radius: 20px;
     padding: 0.5rem;
     margin-top: 1.5rem;
+}
+
+.font-mati {
+    font-size: 0.9rem;
 }

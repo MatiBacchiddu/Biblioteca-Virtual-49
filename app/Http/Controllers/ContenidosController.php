@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Contenidos;
+use App\ContenidosAdmin;
 use Illuminate\Http\Request;
 
 class ContenidosController extends Controller
@@ -15,7 +16,9 @@ class ContenidosController extends Controller
     public function index()
     {
         //
-        return view('contenidos.index');
+        $contenidos  = ContenidosAdmin::all();
+
+        return view('contenidos.index')->with('contenidos', $contenidos);
     }
 
     /**

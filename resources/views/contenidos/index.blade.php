@@ -40,7 +40,7 @@
                     <li class="nav-item active">
                     <a class="nav-link hover" href="{{url('/')}}"><i class="fas fa-arrow-left flecha"></i> Volver al Inicio <span class="sr-only">(current)</span></a>
                     </li>
-                    <a class="nav-link active" href="{{url('/')}}">Materias<span class="sr-only">(current)</span></a>
+                    <a class="active  btn btn-outline-danger ml-5" href="{{url('/')}}">Materias<span class="sr-only">(current)</span></a>
                 </ul>
             </div>
         </div>
@@ -57,16 +57,20 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-6 col-md-4 mb-4">
+                @foreach($contenidos as $contenido)
+                <div class="col-12 col-md-4 mb-4">
                     <div class="card card-mati">
                         <div class="card-body">
-                          <h5 class="card-title">Nombre del Contenido</h5>
-                          <p>Para el año: año</p>
-                          <p>Archivo: archivo</p>
-                          <p>Materia: cat</p>
+                          <h5 class="card-title text-uppercase font-weight-bold">{{$contenido->nombre}}</h5>
+                          <p>Para: {{$contenido->año}}</p>
+                          <a href="/storage/{{$contenido->archivo}}" download="{{$contenido->nombre}}.pdf" class="btn btn-outline-danger">Descargar PDF</a>
+                          <br>
+                          <a href="/storage/{{$contenido->archivo}}" class="btn btn-outline-danger mt-4" target="_blank">Ver PDF</a>
+                          <p><span class="badge badge-danger font-mati mt-4">{{$contenido->materia->nombre}}</span></p>
                         </div>
                       </div>
                 </div>
+                @endforeach
             </div>
         </div>
     </section>

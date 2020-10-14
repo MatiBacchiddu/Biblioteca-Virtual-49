@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Materia;
 use App\ContenidosAdmin;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class ContenidosAdminController extends Controller
 {
@@ -16,6 +17,10 @@ class ContenidosAdminController extends Controller
     public function index()
     {
         //
+
+        $contenidos = ContenidosAdmin::all();
+
+        return view('contenidosAdmin.index')->with('contenidos', $contenidos);
 
     }
 
@@ -50,7 +55,18 @@ class ContenidosAdminController extends Controller
             'materia' => 'required'
         ]);
 
+          // $ruta_archivo = $request->file('archivo')->store('public');
 
+           $ruta_archivo = $request['archivo']->store('archivos', 'public');
+
+            DB::table('contenidos_admins')->insert([
+                    'nombre' => $data['nombre'],
+                    'año' => $data['años'],
+                    'archivo' => $ruta_archivo,
+                    'materia_id' => $data['materia'],
+                ]);
+
+            return redirect()->action('AdminController@index');
 
     }
 
@@ -94,8 +110,11 @@ class ContenidosAdminController extends Controller
      * @param  \App\ContenidosAdmin  $contenidosAdmin
      * @return \Illuminate\Http\Response
      */
-    public function destroy(ContenidosAdmin $contenidosAdmin)
+    public function destroy($id)
     {
         //
+        $contenidos = ContenidosAdmin::findOrFail($id);
+        ContenidosAdmin::destroy($id);
+        return redirect()->action('ContenidosAdminController@index');
     }
 }

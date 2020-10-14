@@ -26,7 +26,6 @@ class CreateContenidosAdminsTable extends Migration
             $table->string('año');
             $table->string('archivo');
             $table->foreignId('materia_id')->constrained()->onDelete('cascade');
-            $table->timestamps();
         });
     }
 
