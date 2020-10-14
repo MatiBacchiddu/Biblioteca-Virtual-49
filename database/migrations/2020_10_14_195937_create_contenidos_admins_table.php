@@ -13,8 +13,19 @@ class CreateContenidosAdminsTable extends Migration
      */
     public function up()
     {
+
+        Schema::create('materias', function (Blueprint $table) {
+            $table->id();
+            $table->string('nombre');
+        });
+
+
         Schema::create('contenidos_admins', function (Blueprint $table) {
             $table->id();
+            $table->string('nombre');
+            $table->string('año');
+            $table->string('archivo');
+            $table->foreignId('materia_id')->constrained()->onDelete('cascade');
             $table->timestamps();
         });
     }
@@ -27,5 +38,6 @@ class CreateContenidosAdminsTable extends Migration
     public function down()
     {
         Schema::dropIfExists('contenidos_admins');
+        Schema::dropIfExists('materias');
     }
 }

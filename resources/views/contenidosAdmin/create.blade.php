@@ -64,6 +64,7 @@
         </div>
       </div>
 
+
       <!-- Sidebar Menu -->
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
@@ -119,7 +120,7 @@
             <a href="#" class="nav-link">
             <i class=" fas fa-book"></i>
               <p>
-               Contenidos
+                Contenidos
               </p>
             </a>
             <ul class="nav nav-treeview">
@@ -130,7 +131,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="{{url('/admin/contenidos')}}" class="nav-link">
                 <i class="fas fa-plus-circle"></i>
                   <p>Agregar archivo</p>
                 </a>
@@ -197,15 +198,16 @@
     class="max-w-lg mx-auto my-10">
 
     @csrf
-        <div class="form-group ml-5">
-          <label for="titulo">Nombre del contenido</label>
-          <input type="text" name="titulo" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-
+        <div class="form-group ml-5 mr-5">
+          <label for="nombre">Nombre del contenido</label>
+          <input type="text" name="nombre" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
         </div>
-        <div class="form-group ml-5">
-            <label for="descripcion">Descripcion de la Novedad</label>
-            <textarea name="descripcion" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+
+        <div class="form-group ml-5 mr-5">
+            <label for="años">Para los Años</label>
+            <input type="text" name="años" class="form-control" placeholder="Ejemplo: 1 año y 2 año">
           </div>
+
         <button type="submit" class="btn btn-primary ml-5">Enviar</button>
 
 

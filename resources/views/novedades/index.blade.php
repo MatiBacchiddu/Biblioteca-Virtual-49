@@ -64,6 +64,7 @@
         </div>
       </div>
 
+
       <!-- Sidebar Menu -->
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
@@ -119,7 +120,7 @@
             <a href="#" class="nav-link">
             <i class=" fas fa-book"></i>
               <p>
-               Contenidos
+                Contenidos
               </p>
             </a>
             <ul class="nav nav-treeview">
@@ -130,7 +131,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="{{url('/admin/contenidos')}}" class="nav-link">
                 <i class="fas fa-plus-circle"></i>
                   <p>Agregar archivo</p>
                 </a>

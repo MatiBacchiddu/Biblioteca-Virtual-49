@@ -53,7 +53,7 @@
       </nav>
 
 
-      ainer -->
+
  <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Sidebar -->
     <div class="sidebar">
@@ -63,6 +63,8 @@
           <a href="#" class="d-block">Administrador</a>
         </div>
       </div>
+
+      <!-- Sidebar Menu -->
 
       <!-- Sidebar Menu -->
       <nav class="mt-2">
@@ -119,7 +121,7 @@
             <a href="#" class="nav-link">
             <i class=" fas fa-book"></i>
               <p>
-               Contenidos
+                Contenidos
               </p>
             </a>
             <ul class="nav nav-treeview">
@@ -130,7 +132,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="{{url('/admin/contenidos')}}" class="nav-link">
                 <i class="fas fa-plus-circle"></i>
                   <p>Agregar archivo</p>
                 </a>
