@@ -19,7 +19,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/','InicioController@index')->name('inicio.index');
 
 // biblioteca
-Route::get('/biblioteca', 'BibliotecaController@index')->name('biblioteca.index');
+Route::get('/inicio/contenidos', 'ContenidosController@index')->name('contenidos.index');
 
 // admin
 Route::get('/admin', 'AdminController@index')->name('admin.index');

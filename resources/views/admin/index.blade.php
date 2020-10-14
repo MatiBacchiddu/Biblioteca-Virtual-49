@@ -119,7 +119,7 @@
             <a href="#" class="nav-link">
             <i class=" fas fa-book"></i>
               <p>
-               Biblioteca
+                Contenidos
               </p>
             </a>
             <ul class="nav nav-treeview">

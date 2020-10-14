@@ -34,7 +34,7 @@
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#adm">Administracion</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contacto">Contacto</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#ubicacion">Ubicación</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#">Biblioteca Virtual</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{url('/inicio/contenidos')}}">Contenidos</a></li>
                     </ul>
                 </div>
             </div>
