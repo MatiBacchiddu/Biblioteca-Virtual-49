@@ -10,6 +10,8 @@
 </head>
 <body>
 
+
+
     <!--Speakers-->
     <section id="speakers" class="mt-4 mb-4">
         <div class="container">
@@ -19,83 +21,17 @@
                 </div>
             </div>
             <div class="row">
+                @foreach($materias as $materia)
                 <div class="col-6 col-md-4 mb-4">
                     <div class="card">
-                        <img src="Imagenes Recetas/chef2.jpg" class="card-img-top" alt="...">
+                        <img src="assets/img/portfolio/01-thumbnail.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
-                          <h5 class="card-title">Matematica</h5>
-                          <div class="badges">
-                              <span class="badge badge-info">Matematica</span>
-                          </div>
-                          <p class="card-text">Entra aqui para poder ver la bibliografia de esta materia</p>
+                          <h5 class="card-title text-center">{{$materia->nombre}}</h5>
+                          <a class="btn btn-block btn-danger">Entra aqui</a>
                         </div>
                       </div>
                 </div>
-
-                <div class="col-6 col-md-4 mb-4">
-                    <div class="card">
-                        <img src="Imagenes Recetas/chef2.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                          <h5 class="card-title">Historia</h5>
-                          <div class="badges">
-                            <span class="badge badge-info">React</span>
-                          </div>
-                          <p class="card-text">Entra aqui para poder ver la bibliografia de esta materia</p>
-                        </div>
-                      </div>
-                </div>
-
-                <div class="col-6 col-md-4 mb-4">
-                    <div class="card">
-                        <img src="Imagenes Recetas/chef2.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                          <h5 class="card-title">Ciencias Naturales</h5>
-                          <div class="badges">
-                            <span class="badge badge-info">React</span>
-                          </div>
-                          <p class="card-text">Entra aqui para poder ver la bibliografia de esta materia</p>
-                        </div>
-                      </div>
-                </div>
-
-                <div class="col-6 col-md-4 mb-4">
-                    <div class="card">
-                        <img src="Imagenes Recetas/chef2.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                          <h5 class="card-title">Leandro esquel</h5>
-                          <div class="badges">
-                            <span class="badge badge-info">React</span>
-                          </div>
-                          <a class="card-text">Entra aqui para poder ver la bibliografia de esta materia</a>
-                        </div>
-                      </div>
-                </div>
-
-                <div class="col-6 col-md-4 mb-4">
-                    <div class="card">
-                        <img src="Imagenes Recetas/chef2.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                          <h5 class="card-title">Leandro esquel</h5>
-                          <div class="badges">
-                            <span class="badge badge-info">React</span>
-                          </div>
-                          <p class="card-text">Entra aqui para poder ver la bibliografia de esta materia</p>
-                        </div>
-                      </div>
-                </div>
-
-                <div class="col-6 col-md-4 mb-4">
-                    <div class="card">
-                        <img src="Imagenes Recetas/chef2.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                          <h5 class="card-title">Leandro esquel</h5>
-                          <div class="badges">
-                            <span class="badge badge-info">React</span>
-                          </div>
-                          <p class="card-text">Entra aqui para poder ver la bibliografia de esta materia</p>
-                        </div>
-                      </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </section>

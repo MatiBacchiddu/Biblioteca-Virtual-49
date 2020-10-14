@@ -14,27 +14,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 
 // inicio
-Route::get('/inicio','InicioController@index')->name('inicio.index');
+Route::get('/','InicioController@index')->name('inicio.index');
 
 // biblioteca
-Route::get('/inicio/biblioteca', function(){
-    return view('biblioteca.index');
-});
-
-
-
-
-
-Route::get('/inicio/biblioteca', function(){
-    return view('biblioteca.index');
-});
-
+Route::get('/biblioteca', 'BibliotecaController@index')->name('biblioteca.index');
 
 // admin
 Route::get('/admin', 'AdminController@index')->name('admin.index');

@@ -65,6 +65,8 @@
         </section>
         {{--Cierre de historia escolar---}}
 
+
+
         {{--Novedades--}}
         <section class="page-section bg-light" id="novedades">
             <div class="container">
@@ -82,9 +84,6 @@
                             <img src="assets/img/portfolio/01-thumbnail.jpg" class="card-img-top" alt="...">
                             <div class="card-body">
                               <h5 class="card-title">{{$novedad->titulo}}</h5>
-                              <div class="badges">
-                                  <span class="badge badge-danger">Todo lo que tienes que saber: </span>
-                              </div>
                               <p class="card-text">{{$novedad->descripcion}}</p>
                             </div>
                           </div>

@@ -2,19 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Novedades;
+use App\Materia;
+use App\Biblioteca;
 use Illuminate\Http\Request;
 
-class NovedadesController extends Controller
+class BibliotecaController extends Controller
 {
-
-    public function __construct()
-    {
-        $this->middleware('auth'); // proteger autenticacion
-    }
-
-
-
     /**
      * Display a listing of the resource.
      *
@@ -23,8 +16,10 @@ class NovedadesController extends Controller
     public function index()
     {
         //
-        $novedades = Novedades::all();
-        return view('novedades.index')->with('novedades', $novedades);
+        $materias = Materia::all();
+
+
+        return view('biblioteca.index')->with('materias', $materias);
     }
 
     /**
@@ -35,7 +30,6 @@ class NovedadesController extends Controller
     public function create()
     {
         //
-        return view('novedades.create');
     }
 
     /**
@@ -47,24 +41,15 @@ class NovedadesController extends Controller
     public function store(Request $request)
     {
         //
-        $data = $request->validate([
-            'titulo' => 'required',
-            'descripcion' => 'required'
-        ]);
-
-        Novedades::insert($data);
-
-            return 'Se agrego correctamente';
-
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Novedades  $novedades
+     * @param  \App\Biblioteca  $biblioteca
      * @return \Illuminate\Http\Response
      */
-    public function show(Novedades $novedades)
+    public function show(Biblioteca $biblioteca)
     {
         //
     }
@@ -72,10 +57,10 @@ class NovedadesController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Novedades  $novedades
+     * @param  \App\Biblioteca  $biblioteca
      * @return \Illuminate\Http\Response
      */
-    public function edit(Novedades $novedades)
+    public function edit(Biblioteca $biblioteca)
     {
         //
     }
@@ -84,10 +69,10 @@ class NovedadesController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Novedades  $novedades
+     * @param  \App\Biblioteca  $biblioteca
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Novedades $novedades)
+    public function update(Request $request, Biblioteca $biblioteca)
     {
         //
     }
@@ -95,14 +80,11 @@ class NovedadesController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Novedades  $novedades
+     * @param  \App\Biblioteca  $biblioteca
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id) // antes tenia Novedades y $novedades
+    public function destroy(Biblioteca $biblioteca)
     {
         //
-        $novedades = Novedades::findOrFail($id);
-        Novedades::destroy($id);
-        return redirect()->action('NovedadesController@index');
     }
 }
