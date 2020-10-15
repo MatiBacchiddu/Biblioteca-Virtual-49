@@ -37,3 +37,23 @@
 .hr-contenido {
     border: 1px solid #540b0e;
 }
+
+.navbar-mati {
+    background-color: #540b0e;
+}
+
+.rayitas {
+    color: white;
+}
+
+.rayitas:hover{
+    color: grey;
+}
+
+.cerrar {
+    color: white;
+}
+
+.cerrar:hover{
+    color: grey;
+}
