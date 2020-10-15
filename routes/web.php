@@ -42,6 +42,8 @@ Route::delete('/contenidos/{contenido}', 'ContenidosAdminController@destroy')->n
 Route::get('admin/historiaCrear', 'HistoriaController@create')->name('historiaAdmin.create');
 Route::get('/admin/historia', 'HistoriaController@index')->name('historiaAdmin.index');
 Route::post('historia', 'HistoriaController@store')->name('historiaAdmin.store');
+Route::get('/historias/{historia}/edit', 'HistoriaController@edit')->name('historiaAdmin.edit');
+Route::put('/historias/{historia}', 'HistoriaController@update')->name('historia.update');
 Route::delete('/historias/{historia}', 'HistoriaController@destroy')->name('historiaAdmin.destroy');
 
 Auth::routes();

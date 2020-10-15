@@ -73,6 +73,8 @@ class HistoriaController extends Controller
     public function edit(Historia $historia)
     {
         //
+        $historias = Historia::all();
+        return view('historiaAdmin.edit')->with('historias', $historias);
     }
 
     /**
@@ -85,6 +87,15 @@ class HistoriaController extends Controller
     public function update(Request $request, Historia $historia)
     {
         //
+        $data = $request->validate([
+            'descripcion' => 'required'
+        ]);
+
+        $historia->descripcion = $data['descripcion'];
+
+        $historia->save();
+
+        return redirect()->action('AdminController@index');
     }
 
     /**
