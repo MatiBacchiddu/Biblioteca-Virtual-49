@@ -26,12 +26,12 @@
     class="max-w-lg mx-auto my-10">
 
     @csrf
-        <div class="form-group ml-5">
+        <div class="form-group ml-5 mr-5">
           <label for="titulo">Titulo</label>
           <input type="text" name="titulo" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
 
         </div>
-        <div class="form-group ml-5">
+        <div class="form-group ml-5 mr-5">
             <label for="descripcion">Descripcion de la Novedad</label>
             <textarea name="descripcion" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
           </div>
