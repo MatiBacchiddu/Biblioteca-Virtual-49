@@ -37,6 +37,13 @@ Route::get('/admin/contenidosTodos', 'ContenidosAdminController@index')->name('c
 Route::post('contenidosAdmin', 'ContenidosAdminController@store')->name('contenidosAdmin.store');
 Route::delete('/contenidos/{contenido}', 'ContenidosAdminController@destroy')->name('contenidosAdmin.destroy');
 
+
+// Admin Historia
+Route::get('admin/historiaCrear', 'HistoriaController@create')->name('historiaAdmin.create');
+Route::get('/admin/historia', 'HistoriaController@index')->name('historiaAdmin.index');
+Route::post('historia', 'HistoriaController@store')->name('historiaAdmin.store');
+Route::delete('/historias/{historia}', 'HistoriaController@destroy')->name('historiaAdmin.destroy');
+
 Auth::routes();
 
 

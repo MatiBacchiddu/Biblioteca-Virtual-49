@@ -64,6 +64,34 @@
     </li>
     <!--cierre de Categorias-->
 
+
+
+    <!-- Historia -->
+    <li class="nav-item has-treeview">
+      <a href="#" class="nav-link">
+        <i class="fas fa-landmark"></i>
+        <p>
+          Historia
+        </p>
+      </a>
+      <ul class="nav nav-treeview">
+        <li class="nav-item">
+          <a href="{{url('/admin/historia')}}" class="nav-link">
+          <i class="fas fa-list"></i>
+            <p>Ver</p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="{{url('/admin/historiaCrear')}}" class="nav-link">
+          <i class="fas fa-plus-circle"></i>
+            <p>Crear</p>
+          </a>
+        </li>
+      </ul>
+    </li>
+    <!--cierre de Historias-->
+
+
   <!-- Admins -->
     <li class="nav-item has-treeview">
       <a href="#" class="nav-link">

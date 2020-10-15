@@ -8,6 +8,8 @@ use Illuminate\Http\Request;
 
 class ContenidosController extends Controller
 {
+
+
     /**
      * Display a listing of the resource.
      *

@@ -9,6 +9,13 @@ use Illuminate\Support\Facades\DB;
 
 class ContenidosAdminController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware('auth'); // proteger autenticacion
+    }
+
+
     /**
      * Display a listing of the resource.
      *
