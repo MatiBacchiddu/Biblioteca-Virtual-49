@@ -81,12 +81,6 @@
             <p>Ver</p>
           </a>
         </li>
-        <li class="nav-item">
-          <a href="{{url('/admin/historiaCrear')}}" class="nav-link">
-          <i class="fas fa-plus-circle"></i>
-            <p>Crear</p>
-          </a>
-        </li>
       </ul>
     </li>
     <!--cierre de Historias-->

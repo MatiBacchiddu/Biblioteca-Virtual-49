@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Inicio;
+use App\Historia;
 use App\Novedades;
 use Illuminate\Http\Request;
 
@@ -17,8 +18,10 @@ class InicioController extends Controller
     {
         //
         $novedades = Novedades::all();
+        $historias = Historia::all();
 
-        return view('inicio.index')->with('novedades', $novedades);
+        return view('inicio.index')->with('novedades', $novedades)
+                                   ->with('historias', $historias);
     }
 
     /**
