@@ -31,7 +31,7 @@
                     <ul class="navbar-nav text-uppercase ml-auto">
                     	<li class="nav-item"><a class="nav-link js-scroll-trigger" href="#historia">Historia Escolar</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#novedades">Novedades</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#adm">Administracion</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#adm">Administración</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contacto">Contacto</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#ubicacion">Ubicación</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{url('/inicio/contenidos')}}">Contenidos</a></li>
@@ -44,7 +44,7 @@
             <div class="container">
 
                 <div class="masthead-heading text-uppercase">Escuela Secundaria N*49</div>
-                <div class="masthead-subheading">Partido de Moron</div>
+                <div class="masthead-subheading">Partido de Morón</div>
             </div>
         </header>
         <!--Historia Escolar-->
@@ -52,7 +52,7 @@
         	<div class="container">
         		<div class="text-center">
         			<div class="historia1">
-        			<h2 class="section-heading text-uppercase">Historia Escolar</h2>
+        			<h2 class="section-heading text-uppercase container">Historia Escolar</h2>
         			<p>La Escuela de Enseñanza Secundaria N° 5 comenzó a funcionar en <strong>marzo de 1968</strong> en turno vespertino, dado que no tenía edificio propio y le cedieron para su funcionamiento, las instalaciones de la escuela primaria, actual 153 “República de Japón”. <strong>En 1971</strong> egresa la primera promoción de alumnos con el título de Perito mercantil.<br>
  					<strong>En 1979</strong> la Cooperadora de la Escuela Primaria 140 reclamaba una escuela secundaria; construye en parte de su terreno 10 aulas y solicita al Gobierno Provincial la creación de dicha Escuela Secundaria.<br>
  					 Al año siguiente las autoridades escolares deciden que la Escuela que funcionaba solo en turno vespertino en la Primaria 153, sea trasladada a las aulas recientemente construidas del edificio de la escuela 140, en ese espacio ya pudo funcionar en 2 turnos diurnos. Se consiguen muebles y elementos didácticos y en marzo comienzan las clases en el edificio actual, con entrada por la calle Chile, donde actualmente se encuentra la biblioteca.<br>
@@ -72,14 +72,14 @@
             <div class="container">
                 <div class="text-center">
                     <h2 class="section-heading text-uppercase">Novedades</h2>
-                    <h3 class="section-subheading text-muted">Aquí encontraras las ultimas noticias de la Institución.</h3>
+                    <h3 class="section-subheading text-muted">Aquí encontraras las últimas noticias de la Institución.</h3>
                 </div>
 
         <section id="novedades">
             <div class="container">
                 <div class="row">
                     @foreach($novedades as $novedad)
-                    <div class="col-6 col-md-4 mb-4">
+                    <div class="col-12 col-md-4 mb-4">
                         <div class="card">
                             <img src="assets/img/portfolio/01-thumbnail.jpg" class="card-img-top" alt="...">
                             <div class="card-body">
@@ -115,7 +115,7 @@
                         <div class="adm-member">
                             <img class="mx-auto rounded-circle" src="assets/img/team/2.jpg" alt="" />
                             <h4>Lorem ipsum</h4>
-                            <p class="text-muted">Visedirector</p>
+                            <p class="text-muted">Vicedirector</p>
 
                         </div>
                     </div>
@@ -141,7 +141,7 @@
                 <div class="text-center">
                     <h2 class="section-heading text-uppercase">Contactanos</h2>
                   <h3 class="section-subheading text-uppercase"> Email : secundarian49moron@correo.com </h3>
-                  <h3 class="section-subheading text-uppercase"> Telefono: (011) 1234-5678 </h3>
+                  <h3 class="section-subheading text-uppercase"> Teléfono: (011) 1234-5678 </h3>
                 </div>
 
             <section class="page-section" id="ubicacion">

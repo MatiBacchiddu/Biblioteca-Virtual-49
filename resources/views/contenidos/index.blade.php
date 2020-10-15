@@ -53,7 +53,7 @@
         <div class="container">
             <div class="row">
                 <div class="col text-center text-uppercase">
-                    <h2>Aqui encontraras los contenidos necesarios</h2>
+                    <h2>Aquí encontrarás los contenidos necesarios</h2>
                     <hr class="hr-contenidos">
                 </div>
             </div>
