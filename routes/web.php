@@ -31,6 +31,10 @@ Route::post('admin', 'NovedadesController@store')->name('novedades.store');
 Route::delete('/novedades/{novedad}', 'NovedadesController@destroy')->name('novedades.destroy');
 
 
+// buscador materias
+Route::get('/buscar', 'ContenidosController@search')->name('buscar.show');
+
+
 // admin contenidos
 Route::get('/admin/contenidos', 'ContenidosAdminController@create')->name('contenidosAdmin.create');
 Route::get('/admin/contenidosTodos', 'ContenidosAdminController@index')->name('contenidosAdmin.index');

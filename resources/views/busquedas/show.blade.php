@@ -58,10 +58,12 @@
                 </div>
             </div>
 
+            <p class="font-weight-bold">Resultados busqueda: {{$busqueda}}</p>
+
             <div class="buscador">
                 <form action="{{route('buscar.show')}}" class="container h-100">
                     <div class="row h-100 align-items-center">
-                        <p class="display-4 font-weight-bold texto-buscar">Busca por materia</p>
+                        <p class="display-4 font-weight-bold texto-buscar">Buscador</p>
                         <input type="search" name="buscar" class="form-control" placeholder="buscar">
                     </div>
                 </form>

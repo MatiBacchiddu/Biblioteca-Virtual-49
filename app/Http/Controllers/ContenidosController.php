@@ -23,6 +23,20 @@ class ContenidosController extends Controller
         return view('contenidos.index')->with('contenidos', $contenidos);
     }
 
+
+    public function search(Request $request)
+    {
+        //$busqueda = $request['buscar'];
+        $busqueda = $request->get('buscar');
+
+        $contenidos = ContenidosAdmin::where('nombre', 'like' , '%' . $busqueda . '%')->paginate(1);
+        $contenidos->appends(['buscar' => $busqueda]);
+
+        return view('busquedas.show', compact('contenidos', 'busqueda'));
+
+    }
+
+
     /**
      * Show the form for creating a new resource.
      *
