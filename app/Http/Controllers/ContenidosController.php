@@ -29,7 +29,7 @@ class ContenidosController extends Controller
         //$busqueda = $request['buscar'];
         $busqueda = $request->get('buscar');
 
-        $contenidos = ContenidosAdmin::where('nombre', 'like' , '%' . $busqueda . '%')->paginate(1);
+        $contenidos = ContenidosAdmin::where('nombre', 'like' , '%' . $busqueda . '%')->paginate(3);
         $contenidos->appends(['buscar' => $busqueda]);
 
         return view('busquedas.show', compact('contenidos', 'busqueda'));

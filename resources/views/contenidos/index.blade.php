@@ -40,7 +40,6 @@
                     <li class="nav-item active">
                     <a class="nav-link hover" href="{{url('/')}}"><i class="fas fa-arrow-left flecha"></i> Volver al Inicio <span class="sr-only">(current)</span></a>
                     </li>
-                    <a class="active nav-link ml-5" href="{{url('/')}}">Materias<span class="sr-only">(current)</span></a>
                 </ul>
             </div>
         </div>
@@ -62,7 +61,7 @@
                 <form action="{{route('buscar.show')}}" class="container h-100">
                     <div class="row h-100 align-items-center">
                         <p class="display-4 font-weight-bold texto-buscar">Busca por materia</p>
-                        <input type="search" name="buscar" class="form-control" placeholder="buscar">
+                        <input type="search" name="buscar" class="form-control" placeholder="Ej: Matematica, Sociales, Naturales etc">
                     </div>
                 </form>
             </div>
