@@ -39,20 +39,22 @@
                 </div>
             </div>
         </nav>
+
         <!-- Masthead-->
         <header class="masthead">
             <div class="container">
 
-                <div class="masthead-heading text-uppercase">Escuela Secundaria N*49</div>
-                <div class="masthead-subheading">Partido de Morón</div>
+                <div class="masthead-heading text-uppercase titulo-escuela">Escuela Secundaria N*49</div>
+                <div class="masthead-subheading titulo-partido">Partido de Morón</div>
             </div>
         </header>
+
         <!--Historia Escolar-->
         <section class="page-section bg-light" id="historia">
         	<div class="container">
         		<div class="text-center">
         			<div class="historia1">
-                    <h2 class="section-heading text-uppercase container">Historia Escolar</h2>
+                    <h2 class="section-heading text-uppercase container titulo-historia">Historia Escolar</h2>
                     @foreach($historias as $historia)
                     <p>{{$historia->descripcion}}</p>
                     @endforeach

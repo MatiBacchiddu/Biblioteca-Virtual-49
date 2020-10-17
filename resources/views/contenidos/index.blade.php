@@ -60,8 +60,8 @@
             <div class="buscador">
                 <form action="{{route('buscar.show')}}" class="container h-100">
                     <div class="row h-100 align-items-center">
-                        <p class="display-4 font-weight-bold texto-buscar">Busca por materia</p>
-                        <input type="search" name="buscar" class="form-control" placeholder="Ej: Matematica, Sociales, Naturales etc">
+                        <p class="display-4 font-weight-bold texto-buscar">¿Que estas buscando?</p>
+                        <input type="search" name="buscar" class="form-control" placeholder="Ej: Libro de Matematicas avanzadas, etc">
                     </div>
                 </form>
             </div>
