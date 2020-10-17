@@ -46,6 +46,13 @@ Route::get('/historias/{historia}/edit', 'HistoriaController@edit')->name('histo
 Route::put('/historias/{historia}', 'HistoriaController@update')->name('historia.update');
 Route::delete('/historias/{historia}', 'HistoriaController@destroy')->name('historiaAdmin.destroy');
 
+// admin Directiva
+Route::get('/admin/directiva', 'DirectivaController@index')->name('directivaAdmin.index');
+Route::get('/admin/directivaCrear', 'DirectivaController@create')->name('directivaAdmin.create');
+Route::post('directivos', 'DirectivaController@store')->name('directivaAdmin.store');
+Route::delete('/directivos/{directivo}', 'DirectivaController@destroy')->name('directivaAdmin.destroy');
+
+
 Auth::routes();
 
 

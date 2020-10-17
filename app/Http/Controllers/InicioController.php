@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Directiva;
 use App\Inicio;
 use App\Historia;
 use App\Novedades;
@@ -19,9 +20,11 @@ class InicioController extends Controller
         //
         $novedades = Novedades::all();
         $historias = Historia::all();
+        $directivos = Directiva::all();
 
         return view('inicio.index')->with('novedades', $novedades)
-                                   ->with('historias', $historias);
+                                   ->with('historias', $historias)
+                                   ->with('directivos', $directivos);
     }
 
     /**

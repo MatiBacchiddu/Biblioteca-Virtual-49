@@ -82,34 +82,43 @@
           </a>
         </li>
       </ul>
+
+      <ul class="nav nav-treeview">
+        <li class="nav-item">
+          <a href="{{url('/admin/historiaCrear')}}" class="nav-link">
+          <i class="fas fa-list"></i>
+            <p>Crear</p>
+          </a>
+        </li>
+      </ul>
     </li>
     <!--cierre de Historias-->
 
 
-  <!-- Admins -->
+  <!-- Directiva -->
     <li class="nav-item has-treeview">
       <a href="#" class="nav-link">
       <i class="fas fa-user"></i>
         <p>
-         Administradores
+         Directivos
         </p>
       </a>
       <ul class="nav nav-treeview">
         <li class="nav-item">
-          <a href="lista-admin.php" class="nav-link">
+          <a href="{{url('/admin/directiva')}}" class="nav-link">
           <i class="fas fa-list"></i>
             <p>Ver Todos</p>
           </a>
         </li>
         <li class="nav-item">
-          <a href="crear-admin.php" class="nav-link">
+          <a href="{{url('/admin/directivaCrear')}}" class="nav-link">
           <i class="fas fa-plus-circle"></i>
             <p>Agregar</p>
           </a>
         </li>
       </ul>
     </li>
-    <!--Cierre admins -->
+    <!--Cierre directiva -->
 
 
 </nav>
@@ -119,3 +128,7 @@
 </aside>
 
 {{--Cierre de la navegación--}}
+
+
+
+
