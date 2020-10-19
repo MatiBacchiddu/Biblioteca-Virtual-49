@@ -52,7 +52,7 @@
         <div class="container">
             <div class="row">
                 <div class="col text-center text-uppercase">
-                    <h1 class="font-weight-bold">Aquí encontrarás los contenidos necesarios</h1>
+                    <h1 class="font-weight-bold titulo-contenidos">Aquí encontrarás los contenidos necesarios</h1>
                     <hr class="hr-contenidos">
                 </div>
             </div>
@@ -60,7 +60,7 @@
             <div class="buscador">
                 <form action="{{route('buscar.show')}}" class="container h-100">
                     <div class="row h-100 align-items-center">
-                        <p class="display-4 font-weight-bold texto-buscar">¿Que estas buscando?</p>
+                        <p class="display-4 font-weight-bold texto-buscar titulo-buscar">¿Que estas buscando?</p>
                         <input type="search" name="buscar" class="form-control" placeholder="Ej: Libro de Matematicas avanzadas, etc">
                     </div>
                 </form>

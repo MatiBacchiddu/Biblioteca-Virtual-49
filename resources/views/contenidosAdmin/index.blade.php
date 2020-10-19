@@ -12,7 +12,7 @@
 
     <!-- Main content -->
     <section class="content">
-        <h2 class="text-center mb-5">Administra todos los Contenidos</h2>
+        <h2 class="text-center mb-5 titulo-contenidos">Administra todos los Contenidos</h2>
 
     <div class="col-md-10 mx-auto bg-white p-3">
         <table class="table">

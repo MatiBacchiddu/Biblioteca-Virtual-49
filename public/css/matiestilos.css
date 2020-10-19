@@ -85,6 +85,52 @@
     .titulo-partido {
         font-size: 1rem !important;
     }
+
+    .titulo-novedades {
+        font-size: 2rem !important;
+    }
+
+    .texto-novedades {
+        font-size: 1rem !important;
+    }
+
+    .titulo-administracion {
+        font-size: 1.2rem !important;
+    }
+
+    .texto-administracion {
+        font-size: 1rem !important;
+    }
+
+    .titulo-contactanos {
+        font-size: 1.5rem !important;
+    }
+
+    .email-contactanos {
+        font-size: 1rem !important;
+    }
+
+    .span-contactanos {
+        font-size: 0.6rem !important;
+    }
+
+    .telefono-contactanos {
+        font-size: 1rem !important;
+    }
+
+    .titulo-ubicacion {
+        font-size: 1.5rem !important;
+        margin-bottom: 1rem !important;
+    }
+
+    .titulo-contenidos {
+        font-size: 1.3rem !important;
+    }
+
+    .titulo-buscar {
+        font-size: 1rem !important;
+    }
+
 }
 
 

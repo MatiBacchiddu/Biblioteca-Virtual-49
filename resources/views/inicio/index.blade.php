@@ -49,8 +49,6 @@
             </div>
         </header>
 
-        {{$contactos}}
-
         <!--Historia Escolar-->
         <section class="page-section bg-light" id="historia">
         	<div class="container">
@@ -72,8 +70,8 @@
         <section class="page-section bg-light" id="novedades">
             <div class="container">
                 <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Novedades</h2>
-                    <h3 class="section-subheading text-muted">Aquí encontraras las últimas noticias de la Institución.</h3>
+                    <h2 class="section-heading text-uppercase titulo-novedades">Novedades</h2>
+                    <h3 class="section-subheading text-muted texto-novedades">Aquí encontraras las últimas noticias de la Institución.</h3>
                 </div>
 
 
@@ -101,8 +99,8 @@
         <section class="page-section bg-light" id="adm">
             <div class="container">
                 <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Administracion</h2>
-                    <h3 class="section-subheading text-muted">Directivos</h3>
+                    <h2 class="section-heading text-uppercase titulo-administracion">Administracion</h2>
+                    <h3 class="section-subheading text-muted texto-administracion">Directivos</h3>
                 </div>
                 <div class="row">
                     @foreach($directivos as $directivo)
@@ -124,15 +122,15 @@
         <section class="page-section box-mati" id="contacto">
             <div class="container">
                 <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Contactanos</h2>
-                  <h3 class="section-subheading text-uppercase"> Email : secundarian49moron@correo.com </h3>
-                  <h3 class="section-subheading text-uppercase"> Teléfono: (011) 1234-5678 </h3>
+                    <h2 class="section-heading text-uppercase titulo-contactanos">Contactanos</h2>
+                  <h3 class="section-subheading text-uppercase email-contactanos"> Email : <span class="span-contactanos">secundarian49moron@correo.com</span></h3>
+                  <h3 class="section-subheading text-uppercase telefono-contactanos"> Teléfono: (011) 1234-5678 </h3>
                 </div>
 
             <section class="page-section" id="ubicacion">
                 <div class="container">
                     <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Ubicación</h2></div>
+                    <h2 class="section-heading text-uppercase titulo-ubicacion">Ubicación</h2></div>
 
                 <div class="map" id="map">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3282.323868677951!2d-58.61923039999999!3d-34.646522918169026!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf6ff348cdcdac80f!2sEscuela%20N%C3%BAmero%203!5e0!3m2!1ses-419!2sar!4v1599510861539!5m2!1ses-419!2sar"

@@ -22,12 +22,10 @@ class InicioController extends Controller
         $novedades = Novedades::all();
         $historias = Historia::all();
         $directivos = Directiva::all();
-        $contactos = Contacto::all();
 
         return view('inicio.index')->with('novedades', $novedades)
                                    ->with('historias', $historias)
-                                   ->with('directivos', $directivos)
-                                   ->with('contactos', $contactos);
+                                   ->with('directivos', $directivos);
     }
 
     /**
