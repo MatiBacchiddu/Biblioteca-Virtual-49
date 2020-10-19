@@ -120,6 +120,31 @@
     </li>
     <!--Cierre directiva -->
 
+    <!-- Contacto -->
+    <li class="nav-item has-treeview">
+      <a href="#" class="nav-link">
+      <i class="fas fa-user"></i>
+        <p>
+         Contacto
+        </p>
+      </a>
+      <ul class="nav nav-treeview">
+        <li class="nav-item">
+          <a href="{{url('/admin/contacto')}}" class="nav-link">
+          <i class="fas fa-list"></i>
+            <p>Ver Todos</p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="{{url('/admin/contactoCrear')}}" class="nav-link">
+          <i class="fas fa-plus-circle"></i>
+            <p>Agregar</p>
+          </a>
+        </li>
+      </ul>
+    </li>
+    <!--Cierre directiva -->
+
 
 </nav>
 <!-- /.sidebar-menu -->

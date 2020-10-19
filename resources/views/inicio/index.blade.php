@@ -49,6 +49,8 @@
             </div>
         </header>
 
+        {{$contactos}}
+
         <!--Historia Escolar-->
         <section class="page-section bg-light" id="historia">
         	<div class="container">
