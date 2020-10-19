@@ -53,6 +53,7 @@
             <div class="row">
                 <div class="col text-center text-uppercase">
                     <h1 class="font-weight-bold titulo-contenidos">Aquí encontrarás los contenidos necesarios</h1>
+                    <h3 class="font-weight-bold texto-contenidos">Cantidad de Contenidos: {{$contenidos->count()}}</h3>
                     <hr class="hr-contenidos">
                 </div>
             </div>
@@ -66,6 +67,7 @@
                 </form>
             </div>
             <div class="row">
+            @if(count($contenidos) > 0 )
                 @foreach($contenidos as $contenido)
                 <div class="col-12 col-md-4 mb-4">
                     <div class="card card-mati">
@@ -80,6 +82,12 @@
                       </div>
                 </div>
                 @endforeach
+
+            @else
+                <p class="mensaje-if mt-5">No hay contenidos aun</p>
+
+            @endif
+
             </div>
         </div>
     </section>

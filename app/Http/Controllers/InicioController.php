@@ -7,6 +7,7 @@ use App\Contacto;
 use App\Historia;
 use App\Directiva;
 use App\Novedades;
+use App\ContenidosAdmin;
 use Illuminate\Http\Request;
 
 class InicioController extends Controller
@@ -22,10 +23,12 @@ class InicioController extends Controller
         $novedades = Novedades::all();
         $historias = Historia::all();
         $directivos = Directiva::all();
+        $contenidos = ContenidosAdmin::all();
 
         return view('inicio.index')->with('novedades', $novedades)
                                    ->with('historias', $historias)
-                                   ->with('directivos', $directivos);
+                                   ->with('directivos', $directivos)
+                                   ->with('contenidos', $contenidos);
     }
 
     /**

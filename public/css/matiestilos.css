@@ -72,6 +72,11 @@
     color: #f77f00;
 }
 
+.texto-contenidos {
+    color: #540b0e;
+    font-size: 1.3rem;
+}
+
 
 @media(max-width: 768px){
     .titulo-historia {
@@ -127,10 +132,30 @@
         font-size: 1.3rem !important;
     }
 
+    .texto-contenidos {
+        font-size: 1rem !important;
+    }
+
     .titulo-buscar {
         font-size: 1rem !important;
     }
 
 }
 
+.mensaje-if {
+    font-size: 2rem !important;
+    color: #540b0e;
+}
+
+
+.cantidad-contenido {
+    border: 1px solid white;
+    border-radius: 60px;
+    color: white;
+    margin-left: 3px;
+    padding-left: 7px;
+    padding-right: 7px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
 

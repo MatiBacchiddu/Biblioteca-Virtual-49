@@ -34,7 +34,7 @@
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#adm">Administración</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contacto">Contacto</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#ubicacion">Ubicación</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{url('/inicio/contenidos')}}">Contenidos</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger contenido-nav" href="{{url('/inicio/contenidos')}}">Contenidos <span class="cantidad-contenido">{{$contenidos->count()}}</span> </a></li>
                     </ul>
                 </div>
             </div>
@@ -49,15 +49,26 @@
             </div>
         </header>
 
+
+
         <!--Historia Escolar-->
         <section class="page-section bg-light" id="historia">
         	<div class="container">
         		<div class="text-center">
         			<div class="historia1">
                     <h2 class="section-heading text-uppercase container titulo-historia">Historia Escolar</h2>
+                @if( count($historias) > 0 )
+
                     @foreach($historias as $historia)
                     <p>{{$historia->descripcion}}</p>
                     @endforeach
+
+                @else
+                <p class="text-center mt-5">No hay historia aun</p>
+
+                @endif
+
+
                     </div>
         		</div>
         	</div>
@@ -78,6 +89,8 @@
         <section id="novedades">
             <div class="container">
                 <div class="row">
+
+                @if(count($novedades) > 0)
                     @foreach($novedades as $novedad)
                     <div class="col-12 col-md-4 mb-4">
                         <div class="card">
@@ -89,6 +102,12 @@
                           </div>
                     </div>
                 @endforeach
+
+                @else
+                    <p class="text-center mt-5">No hay novedades</p>
+
+                @endif
+
                 </div>
             </div>
         </section>
@@ -103,6 +122,7 @@
                     <h3 class="section-subheading text-muted texto-administracion">Directivos</h3>
                 </div>
                 <div class="row">
+                @if(count($directivos) > 0 )
                     @foreach($directivos as $directivo)
                     <div class="col-lg-4">
                         <div class="adm-member">
@@ -113,6 +133,10 @@
                         </div>
                     </div>
                     @endforeach
+                @else
+                    <p class="text-center mt-5">No hay directivos aun</p>
+
+                @endif
                 </div>
             </div>
         </section>
