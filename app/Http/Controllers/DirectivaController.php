@@ -110,6 +110,6 @@ class DirectivaController extends Controller
         $directivos = Directiva::findOrFail($id);
         Directiva::destroy($id);
 
-        return 'Eliminado Correctamente';
+        return view('admin.index');
     }
 }

@@ -54,7 +54,7 @@ class NovedadesController extends Controller
 
         Novedades::insert($data);
 
-            return 'Se agrego correctamente';
+            return view('admin.index');
 
     }
 
