@@ -24,6 +24,7 @@
   </head>
   <body>
 
+
     <nav id="header" class="navbar navbar-expand-lg navbar-dark bg-bordo">
         <div class="container">
                     <a class="navbar-brand" href="{{route('inicio.index')}}">
@@ -32,16 +33,18 @@
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                     </button>
-
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ml-auto">
-                        @foreach($materias as $materia)
-                        <li class="nav-item active">
-                        <a class="nav-link hover materia-hover" href="{{route('materias.show', ['materia' => $materia->id])}}">{{$materia->nombre}}<span class="sr-only">(current)</span></a>
-                        </li>
-                        @endforeach
-                    </ul>
-                </div>
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Toca aqui para ver las materias
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            @foreach($materias as $materia)
+                            <li class="nav-item active">
+                            <a class="nav-link hover materia-hover" href="{{route('materias.show', ['materia' => $materia->id])}}">{{$materia->nombre}}<span class="sr-only">(current)</span></a>
+                            </li>
+                            @endforeach
+                        </div>
+                    </div>
         </div>
     </nav>
 

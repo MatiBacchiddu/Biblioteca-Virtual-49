@@ -51,7 +51,7 @@
         <div class="container">
             <div class="row">
                 <div class="col text-center text-uppercase">
-                    <h1 class="font-weight-bold">Aquí encontrarás los contenidos necesarios</h1>
+                    <h1 class="font-weight-bold titulo-contenidos">Aquí encontrarás los contenidos necesarios</h1>
                     <hr class="hr-contenidos">
                 </div>
             </div>
@@ -67,6 +67,8 @@
                 </form>
             </div>
             <div class="row">
+
+            @if(count($contenidos) > 0)
                 @foreach($contenidos as $contenido)
                 <div class="col-12 col-md-4 mb-4">
                     <div class="card card-mati">
@@ -81,6 +83,9 @@
                       </div>
                 </div>
                 @endforeach
+            @else
+                <p class="mensaje-if mt-5">No existe resultados para esta busqueda</p>
+            @endif
             </div>
             <div class="d-flex justify-content-center mt-5">
                 {{$contenidos->links()}}
