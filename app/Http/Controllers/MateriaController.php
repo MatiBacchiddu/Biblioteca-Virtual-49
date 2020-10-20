@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\ContenidosAdmin;
 use App\Materia;
 use Illuminate\Http\Request;
 
@@ -47,6 +48,9 @@ class MateriaController extends Controller
     public function show(Materia $materia)
     {
         //
+        $contenidos = ContenidosAdmin::where('materia_id', $materia->id)->paginate(10);
+
+        return view('materias.show', compact('contenidos', 'materia'));
     }
 
     /**

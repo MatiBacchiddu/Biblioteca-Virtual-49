@@ -4,9 +4,9 @@
 }
 
 .box-mati {
-    --webkit-box-shadow: 0px -2px 19px 7px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px -2px 19px 7px rgba(0,0,0,0.75);
-    box-shadow: 0px -2px 19px 7px rgba(0,0,0,0.75);
+    --webkit-box-shadow: 0px -2px 19px 7px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px -2px 19px 7px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px -2px 19px 7px rgba(0, 0, 0, 0.75);
 }
 
 .bg-bordo {
@@ -16,7 +16,6 @@
 .flecha {
     margin-left: 1rem;
 }
-
 
 .card-mati {
     padding: 0.5rem;
@@ -46,7 +45,7 @@
     color: white;
 }
 
-.rayitas:hover{
+.rayitas:hover {
     color: grey;
 }
 
@@ -54,7 +53,7 @@
     color: white;
 }
 
-.cerrar:hover{
+.cerrar:hover {
     color: grey;
 }
 
@@ -77,76 +76,59 @@
     font-size: 1.3rem;
 }
 
-
-@media(max-width: 768px){
+@media(max-width: 768px) {
     .titulo-historia {
         font-size: 2rem !important;
     }
-
     .titulo-escuela {
         font-size: 2rem !important;
     }
-
     .titulo-partido {
         font-size: 1rem !important;
     }
-
     .titulo-novedades {
         font-size: 2rem !important;
     }
-
     .texto-novedades {
         font-size: 1rem !important;
     }
-
     .titulo-administracion {
         font-size: 1.2rem !important;
     }
-
     .texto-administracion {
         font-size: 1rem !important;
     }
-
     .titulo-contactanos {
         font-size: 1.5rem !important;
     }
-
     .email-contactanos {
         font-size: 1rem !important;
     }
-
     .span-contactanos {
         font-size: 0.6rem !important;
     }
-
     .telefono-contactanos {
         font-size: 1rem !important;
     }
-
     .titulo-ubicacion {
         font-size: 1.5rem !important;
         margin-bottom: 1rem !important;
     }
-
     .titulo-contenidos {
         font-size: 1.3rem !important;
     }
-
     .texto-contenidos {
         font-size: 1rem !important;
     }
-
     .titulo-buscar {
         font-size: 1rem !important;
     }
-
 }
 
 .mensaje-if {
     font-size: 2rem !important;
     color: #540b0e;
 }
-
 
 .cantidad-contenido {
     border: 1px solid white;
@@ -159,3 +141,10 @@
     padding-bottom: 3px;
 }
 
+.materia-hover {
+    transition: .3s ease-in;
+}
+
+.materia-hover:hover {
+    color: gray !important;
+}

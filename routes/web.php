@@ -56,6 +56,8 @@ Route::get('/admin/directivaCrear', 'DirectivaController@create')->name('directi
 Route::post('directivos', 'DirectivaController@store')->name('directivaAdmin.store');
 Route::delete('/directivos/{directivo}', 'DirectivaController@destroy')->name('directivaAdmin.destroy');
 
+// materias
+Route::get('/materias/{materia}', 'MateriaController@show')->name('materias.show');
 
 Auth::routes();
 

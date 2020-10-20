@@ -26,8 +26,8 @@
 
     <nav id="header" class="navbar navbar-expand-lg navbar-dark bg-bordo">
         <div class="container">
-                    <a class="navbar-brand" href="{{route('inicio.index')}}">
-                        <i class="far fa-arrow-alt-circle-left"> Inicio</i>
+                    <a class="navbar-brand" href="{{route('contenidos.index')}}">
+                        <i class="far fa-arrow-alt-circle-left"></i> Todos los contenidos
                     </a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -51,12 +51,6 @@
     <!--Speakers-->
     <section id="speakers" class="mt-4 mb-4">
         <div class="container">
-            <div class="row">
-                <div class="col text-center text-uppercase">
-                    <h1 class="font-weight-bold titulo-contenidos">Aquí encontrarás los contenidos necesarios</h1>
-                    <hr class="hr-contenidos">
-                </div>
-            </div>
 
             <div class="buscador">
                 <form action="{{route('buscar.show')}}" class="container h-100">
@@ -66,9 +60,11 @@
                     </div>
                 </form>
             </div>
+
             <div class="row">
             @if(count($contenidos) > 0 )
                 @foreach($contenidos as $contenido)
+
                 <div class="col-12 col-md-4 mb-4">
                     <div class="card card-mati">
                         <div class="card-body">
@@ -84,7 +80,7 @@
                 @endforeach
 
             @else
-                <p class="mensaje-if mt-5">No hay contenidos aun</p>
+                <p class="mensaje-if mt-5">No hay contenidos para esta materia</p>
 
             @endif
 

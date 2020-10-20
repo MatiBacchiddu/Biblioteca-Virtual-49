@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Materia;
 use App\Contenidos;
 use App\ContenidosAdmin;
 use Illuminate\Http\Request;
@@ -19,8 +20,10 @@ class ContenidosController extends Controller
     {
         //
         $contenidos  = ContenidosAdmin::all();
+        $materias = Materia::all();
 
-        return view('contenidos.index')->with('contenidos', $contenidos);
+        return view('contenidos.index')->with('contenidos', $contenidos)
+                                       ->with('materias', $materias);
     }
 
 
@@ -29,7 +32,7 @@ class ContenidosController extends Controller
         //$busqueda = $request['buscar'];
         $busqueda = $request->get('buscar');
 
-        $contenidos = ContenidosAdmin::where('nombre', 'like' , '%' . $busqueda . '%')->paginate(3);
+        $contenidos = ContenidosAdmin::where('nombre', 'like' , '%' . $busqueda . '%')->paginate(10);
         $contenidos->appends(['buscar' => $busqueda]);
 
         return view('busquedas.show', compact('contenidos', 'busqueda'));
