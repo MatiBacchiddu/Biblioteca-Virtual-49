@@ -155,3 +155,7 @@
 .materia-hover:hover {
     color: gray !important;
 }
+
+.boton-drop {
+    background-color: #9e2a2b;
+}
