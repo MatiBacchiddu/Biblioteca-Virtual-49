@@ -12,7 +12,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="text-center">Administra aqui toda la pagina</h1>
+            <h1 class="text-center">Administra aquí toda la pagina</h1>
           </div>
         </div>
       </div><!-- /.container-fluid -->
@@ -28,7 +28,7 @@
 
         </div>
         <div class="card-body">
-          Ve hacia la navegacion de la izquierda y selecciona para administrar cualquiera de las opciones
+          Ve hacia la navegación de la izquierda y selecciona para administrar cualquiera de las opciones 
         </div>
         <!-- /.card-body -->
         <div class="card-footer">

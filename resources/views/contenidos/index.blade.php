@@ -35,7 +35,7 @@
                     </button>
                     <div class="dropdown">
                         <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          Toca aqui para ver las materias
+                            Toca aquí para ver las materias
                         </button>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                             @foreach($materias as $materia)
@@ -64,7 +64,7 @@
             <div class="buscador">
                 <form action="{{route('buscar.show')}}" class="container h-100">
                     <div class="row h-100 align-items-center">
-                        <p class="display-4 font-weight-bold texto-buscar titulo-buscar">¿Que estas buscando?</p>
+                        <p class="display-4 font-weight-bold texto-buscar titulo-buscar">¿Qué estás buscando?</p>
                         <input type="search" name="buscar" class="form-control" placeholder="Ej: Libro de Matematicas avanzadas, etc">
                     </div>
                 </form>

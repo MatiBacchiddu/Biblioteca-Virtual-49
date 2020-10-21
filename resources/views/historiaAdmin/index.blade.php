@@ -15,7 +15,7 @@
         <table class="table">
             <thead class="bg-bordo text-light">
                 <tr>
-                    <th scole="col-6">Descripcion</th>
+                    <th scole="col-6">Descripción</th>
                     <th scole="col-6">Acciones</th>
 
                 </tr>
