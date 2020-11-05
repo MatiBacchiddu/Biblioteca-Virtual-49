@@ -56,6 +56,10 @@ Route::get('/admin/directivaCrear', 'DirectivaController@create')->name('directi
 Route::post('directivos', 'DirectivaController@store')->name('directivaAdmin.store');
 Route::delete('/directivos/{directivo}', 'DirectivaController@destroy')->name('directivaAdmin.destroy');
 
+// admin Biblioteca
+Route::get('/admin/biblioteca', 'BibliotecaController@create')->name('bibliotecaAdmin.create');
+Route::post('bibliotecaAdmin', 'BibliotecaController@store')->name('bibliotecaAdmin.store');
+
 // materias
 Route::get('/materias/{materia}', 'MateriaController@show')->name('materias.show');
 
