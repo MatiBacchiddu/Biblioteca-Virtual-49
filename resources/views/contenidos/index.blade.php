@@ -33,6 +33,7 @@
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                     </button>
+<<<<<<< HEAD
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ml-auto">
@@ -43,6 +44,20 @@
                         @endforeach
                     </ul>
                 </div>
+=======
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Toca aquí para ver las materias
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            @foreach($materias as $materia)
+                            <li class="nav-item active">
+                            <a class="nav-link hover materia-hover" href="{{route('materias.show', ['materia' => $materia->id])}}">{{$materia->nombre}}<span class="sr-only">(current)</span></a>
+                            </li>
+                            @endforeach
+                        </div>
+                    </div>
+>>>>>>> 0df785c30c6dbfcf86e1960f844d1eca3837c35b
         </div>
     </nav>
 
@@ -62,7 +77,7 @@
             <div class="buscador">
                 <form action="{{route('buscar.show')}}" class="container h-100">
                     <div class="row h-100 align-items-center">
-                        <p class="display-4 font-weight-bold texto-buscar titulo-buscar">¿Que estas buscando?</p>
+                        <p class="display-4 font-weight-bold texto-buscar titulo-buscar">¿Qué estás buscando?</p>
                         <input type="search" name="buscar" class="form-control" placeholder="Ej: Libro de Matematicas avanzadas, etc">
                     </div>
                 </form>
