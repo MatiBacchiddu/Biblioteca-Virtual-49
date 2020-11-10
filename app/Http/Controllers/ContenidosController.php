@@ -39,7 +39,9 @@ class ContenidosController extends Controller
 
     }
 
-
+    public function download(ContenidosAdmin $contenido){
+        return response()->download(public_path('storage/archivos/' . $contenido->archivo));
+    }
     /**
      * Show the form for creating a new resource.
      *

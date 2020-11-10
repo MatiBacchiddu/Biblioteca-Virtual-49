@@ -28,7 +28,7 @@
 
         </div>
         <div class="card-body">
-          Ve hacia la navegación de la izquierda y selecciona para administrar cualquiera de las opciones 
+          Ve hacia la navegación de la izquierda y selecciona para administrar cualquiera de las opciones
         </div>
         <!-- /.card-body -->
         <div class="card-footer">

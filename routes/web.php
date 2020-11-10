@@ -20,6 +20,7 @@ Route::get('/','InicioController@index')->name('inicio.index');
 
 // biblioteca
 Route::get('/inicio/contenidos', 'ContenidosController@index')->name('contenidos.index');
+Route::get('/descargar/{contenido}', 'ContenidosController@download');
 
 // admin
 Route::get('/admin', 'AdminController@index')->name('admin.index');

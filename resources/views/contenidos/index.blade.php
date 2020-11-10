@@ -75,9 +75,9 @@
                         <div class="card-body">
                           <h5 class="card-title text-uppercase font-weight-bold">{{$contenido->nombre}}</h5>
                           <p>Para: {{$contenido->año}}</p>
-                          <a href="/storage/{{$contenido->archivo}}" download="{{$contenido->nombre}}.pdf" class="btn btn-outline-danger"><i class="fas fa-download"></i> Descargar PDF</a>
+                             <a href="{{ url('descargar/'.$contenido->id) }}" class="btn btn-outline-danger"><i class="fas fa-download"></i> Descargar PDF</a>
                           <br>
-                          <a href="/storage/{{$contenido->archivo}}" class="btn btn-outline-danger mt-4" target="_blank"><i class="fas fa-eye"></i> Ver PDF</a>
+                          <a href="/storage/archivos/{{$contenido->archivo}}" class="btn btn-outline-danger mt-4" target="_blank"><i class="fas fa-eye"></i> Ver PDF</a>
                           <p><span class="badge badge-danger font-mati mt-4">{{$contenido->materia->nombre}}</span></p>
                         </div>
                       </div>

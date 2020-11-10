@@ -6,6 +6,7 @@ use App\Materia;
 use App\ContenidosAdmin;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\File;
 
 class ContenidosAdminController extends Controller
 {
@@ -64,12 +65,16 @@ class ContenidosAdminController extends Controller
 
           // $ruta_archivo = $request->file('archivo')->store('public');
 
-           $ruta_archivo = $request['archivo']->store('archivos', 'public');
+        $archivo = $request->file('archivo');
+
+        $nombre_archivo = $archivo->getClientOriginalName();
+
+        $archivo->move(public_path('storage/archivos'), $nombre_archivo);
 
             DB::table('contenidos_admins')->insert([
                     'nombre' => $data['nombre'],
                     'año' => $data['años'],
-                    'archivo' => $ruta_archivo,
+                    'archivo' => $nombre_archivo,
                     'materia_id' => $data['materia'],
                 ]);
 
@@ -117,11 +122,10 @@ class ContenidosAdminController extends Controller
      * @param  \App\ContenidosAdmin  $contenidosAdmin
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(ContenidosAdmin $contenido)
     {
-        //
-        $contenidos = ContenidosAdmin::findOrFail($id);
-        ContenidosAdmin::destroy($id);
+        File::delete('storage/imagenes/' . $contenido->archivo);
+        ContenidosAdmin::destroy($contenido->id);
         return redirect()->action('ContenidosAdminController@index');
     }
 }
