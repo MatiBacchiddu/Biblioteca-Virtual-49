@@ -22,7 +22,7 @@
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
             <div class="container">
-                <a class="navbar-brand js-scroll-trigger" href="#page-top"><img src="assets/img/logo.png" alt="" /></a>
+                <a class="navbar-brand js-scroll-trigger" href="#page-top">49</a>
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu<!--Menú-->
                     <i class="fas fa-bars ml-1"></i>
@@ -169,7 +169,7 @@
 
 
         <!-- Footer-->
-        <footer class="footer py-4 mt-6 w-100 footer-mati">
+        <footer class="footer py-5 mt-6 w-100 footer-mati">
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-lg-4 text-lg-left">Copyright © Escuela Secundaria N*49 2020 </div>

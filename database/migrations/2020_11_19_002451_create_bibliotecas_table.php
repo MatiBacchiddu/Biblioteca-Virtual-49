@@ -1,11 +1,10 @@
-
 <?php
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateHistoriasTable extends Migration
+class CreateBibliotecasTable extends Migration
 {
     /**
      * Run the migrations.
@@ -14,10 +13,12 @@ class CreateHistoriasTable extends Migration
      */
     public function up()
     {
-        Schema::create('historias', function (Blueprint $table) {
+        Schema::create('bibliotecas', function (Blueprint $table) {
             $table->id();
-            $table->text('descripcion');
-            $table->timestamps();
+            $table->string('titulo');
+            $table->string('autor');
+            $table->string('editorial');
+            $table->string('libro');
         });
     }
 
@@ -28,6 +29,6 @@ class CreateHistoriasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('historias');
+        Schema::dropIfExists('bibliotecas');
     }
 }

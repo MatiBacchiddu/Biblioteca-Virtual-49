@@ -27,68 +27,52 @@
 
     <nav id="header" class="navbar navbar-expand-lg navbar-dark bg-bordo">
         <div class="container">
-                    <a class="navbar-brand" href="{{route('inicio.index')}}">
-                        <i class="far fa-arrow-alt-circle-left"> Inicio</i>
+                    <a class="navbar-brand" href="{{route('contenidos.index')}}">
+                        <i class="far fa-arrow-alt-circle-left"> volver</i>
                     </a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                     </button>
-
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ml-auto">
-                        <a class="nav-link hover materia-hover active font-weight-bold" href="{{route('contenidos.seleccion')}}">Toca aqui para ver todas las materias</a>
-                    </ul>
-                </div>
         </div>
     </nav>
 
-
-
-
-    <!--Speakers-->
     <section id="speakers" class="mt-4 mb-4">
         <div class="container">
             <div class="row">
                 <div class="col text-center text-uppercase">
-                    <h1 class="font-weight-bold titulo-contenidos">Aquí encontrarás los contenidos necesarios</h1>
+                    <h1 class="font-weight-bold titulo-contenidos">Todas las materias</h1>
                     <hr class="hr-contenidos">
                 </div>
             </div>
+        </div>
+    </section>
 
-            <div class="buscador">
-                <form action="{{route('buscar.show')}}" class="container h-100">
-                    <div class="row h-100 align-items-center">
-                        <p class="display-4 font-weight-bold texto-buscar titulo-buscar">¿Qué estás buscando?</p>
-                        <input type="search" name="buscar" class="form-control" placeholder="Ej: Libro de Matematicas avanzadas, etc">
-                    </div>
-                </form>
-            </div>
+    <section id="novedades">
+        <div class="container">
             <div class="row">
-            @if(count($contenidos) > 0 )
-                @foreach($contenidos as $contenido)
+
+            @if(count($materias) > 0)
+                @foreach($materias as $materia)
                 <div class="col-12 col-md-4 mb-4">
-                    <div class="card card-mati">
-                        <div class="card-body">
-                          <h5 class="card-title text-uppercase font-weight-bold">{{$contenido->nombre}}</h5>
-                          <p>Para: {{$contenido->año}}</p>
-                             <a href="{{ url('descargar/'.$contenido->id) }}" class="btn btn-outline-danger"><i class="fas fa-download"></i> Descargar PDF</a>
-                          <br>
-                          <a href="/storage/archivos/{{$contenido->archivo}}" class="btn btn-outline-danger mt-4" target="_blank"><i class="fas fa-eye"></i> Ver PDF</a>
-                          <p><span class="badge badge-danger font-mati mt-4">{{$contenido->materia->nombre}}</span></p>
+                    <div class="card">
+                        <div class="card-body contenedor-materia">
+                          <a href="{{route('materias.show', ['materia' => $materia->id])}}" class="link-materia"><h5 class="card-title">{{$materia->nombre}}</h5></a>
                         </div>
                       </div>
                 </div>
-                @endforeach
+            @endforeach
 
             @else
-                <p class="mensaje-if mt-5">No hay contenidos aun</p>
+                <p class="text-center mt-5">No hay materias</p>
 
             @endif
 
             </div>
         </div>
     </section>
-    <!--Cierre speakers-->
+
+
+
 
 
        <!-- Footer-->

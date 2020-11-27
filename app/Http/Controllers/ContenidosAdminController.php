@@ -124,7 +124,7 @@ class ContenidosAdminController extends Controller
      */
     public function destroy(ContenidosAdmin $contenido)
     {
-        File::delete('storage/imagenes/' . $contenido->archivo);
+        File::delete('storage/archivos/' . $contenido->archivo);
         ContenidosAdmin::destroy($contenido->id);
         return redirect()->action('ContenidosAdminController@index');
     }

@@ -3,6 +3,9 @@
   <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
     <!-- Add icons to the links using the .nav-icon class
          with font-awesome or any other icon font library -->
+
+
+
     <li class="nav-item has-treeview">
       <a href="{{url('/admin')}}" class="nav-link">
         <i class="nav-icon fas fa-tachometer-alt"></i>
@@ -38,8 +41,36 @@
     </li>
     <!-- cierre novedades -->
 
+    <!-- Materias -->
+    <li class="nav-item has-treeview">
+        <a href="#" class="nav-link">
+        <i class=" fas fa-book"></i>
+          <p>
+            Materias
+          </p>
+        </a>
+        <ul class="nav nav-treeview">
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+            <i class="fas fa-list"></i>
+              <p>Ver Todos</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+            <i class="fas fa-plus-circle"></i>
+              <p>Agregar archivo</p>
+            </a>
+          </li>
+        </ul>
+      </li>
+      <!-- Materias -->
 
-    <!-- Categoria biblioteca -->
+
+
+
+
+    <!-- Categoria contenidos -->
     <li class="nav-item has-treeview">
       <a href="#" class="nav-link">
       <i class=" fas fa-book"></i>
@@ -63,6 +94,33 @@
       </ul>
     </li>
     <!--cierre de Categorias-->
+
+
+
+    <!-- Categoria contenidos -->
+    <li class="nav-item has-treeview">
+        <a href="#" class="nav-link">
+        <i class=" fas fa-book"></i>
+          <p>
+            Biblioteca
+          </p>
+        </a>
+        <ul class="nav nav-treeview">
+          <li class="nav-item">
+            <a href="{{url('/admin/biblioteca')}}" class="nav-link">
+            <i class="fas fa-list"></i>
+              <p>Ver Todos</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="{{url('/admin/biblioteca/crear')}}" class="nav-link">
+            <i class="fas fa-plus-circle"></i>
+              <p>Subir Libro</p>
+            </a>
+          </li>
+        </ul>
+      </li>
+      <!--cierre de Categorias-->
 
 
 

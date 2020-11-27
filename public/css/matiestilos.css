@@ -1,12 +1,17 @@
 .footer-mati {
     width: 100%;
     margin-top: 5rem;
+
 }
 
 .box-mati {
     --webkit-box-shadow: 0px -2px 19px 7px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 0px -2px 19px 7px rgba(0, 0, 0, 0.75);
     box-shadow: 0px -2px 19px 7px rgba(0, 0, 0, 0.75);
+}
+
+.c-white {
+    color: white;
 }
 
 .bg-bordo {
@@ -163,3 +168,25 @@
 .boton-drop {
     background-color: #9e2a2b;
 }
+
+.link-materia {
+    color: black;
+}
+
+.link-materia:hover {
+    text-decoration: none;
+    color: #540b0e;
+}
+
+.contenedor-materia {
+    text-align: center;
+    align-items: center;
+    transition: .3s ease-in-out;
+}
+
+
+.contenedor-materia:hover {
+    background-color: #e5e5e5;
+    padding: 1rem;
+}
+

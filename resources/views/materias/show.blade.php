@@ -32,16 +32,6 @@
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                     </button>
-
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ml-auto">
-                        @foreach($materias as $materia)
-                        <li class="nav-item active">
-                        <a class="nav-link hover materia-hover" href="{{route('materias.show', ['materia' => $materia->id])}}">{{$materia->nombre}}<span class="sr-only">(current)</span></a>
-                        </li>
-                        @endforeach
-                    </ul>
-                </div>
         </div>
     </nav>
 

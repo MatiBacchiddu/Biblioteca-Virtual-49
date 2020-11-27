@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Biblioteca;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class BibliotecaController extends Controller
 {
@@ -15,7 +16,10 @@ class BibliotecaController extends Controller
     public function index()
     {
         //
+        $bibliotecas = Biblioteca::all();
+        return view('bibliotecaAdmin.index')->with('bibliotecas', $bibliotecas);
     }
+
 
     /**
      * Show the form for creating a new resource.
@@ -37,23 +41,45 @@ class BibliotecaController extends Controller
     public function store(Request $request)
     {
         //
-        $data = $request->validate([
-            'nombre' => 'required',
+        /*$data = $request->validate([
+            'titulo' => 'required',
             'autor' => 'required',
             'editorial' => 'required',
-            'libro' => 'required'
-        ]);
+        ]);*/
 
-        $ruta_libro = $request['libro']->store('libros', 'public');
+        $datosLibro = request()->except('_token');
 
-        DB::table('bibliotecas')->insert([
-            'nombre' => $data['nombre'],
-            'autor' => $data['autor'],
-            'editorial' => $data['editorial'],
-            'libro' => $ruta_libro,
-        ]);
 
-        return redirect()->action('AdminController@index');
+        /*$libro = $request->file('libro');
+
+        $nombre_libro = $libro->getClientOriginalName();*/
+
+
+
+
+
+
+           /* DB::table('bibliotecas')->insert([
+                    'titulo' => $data['titulo'],
+                    'autor' => $data['autor'],
+                    'editorial' => $data['editorial'],
+                ]);*/
+
+
+
+
+
+            if($request->hasFile('libro')) {
+                $datosLibro['libro'] = $request->file('libro')->store('libros', 'public');
+            }
+
+            Biblioteca::insert($datosLibro);
+
+            return redirect()->action('BibliotecaController@index');
+
+
+
+
     }
 
     /**
@@ -99,5 +125,7 @@ class BibliotecaController extends Controller
     public function destroy(Biblioteca $biblioteca)
     {
         //
+        Biblioteca::destroy($biblioteca->id);
+        return redirect()->action('BibliotecaController@index');
     }
 }

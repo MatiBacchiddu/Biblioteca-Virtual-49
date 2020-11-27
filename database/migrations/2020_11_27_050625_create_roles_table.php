@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateBibliotecasTable extends Migration
+class CreateRolesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,9 @@ class CreateBibliotecasTable extends Migration
      */
     public function up()
     {
-        Schema::create('bibliotecas', function (Blueprint $table) {
+        Schema::create('roles', function (Blueprint $table) {
             $table->id();
-            $table->string('nombre');
-            $table->string('autor');
-            $table->string('editorial');
-            $table->string('libro');
+            $table->string('nombre_rol');
             $table->timestamps();
         });
     }
@@ -30,6 +27,6 @@ class CreateBibliotecasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('bibliotecas');
+        Schema::dropIfExists('roles');
     }
 }

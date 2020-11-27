@@ -18,9 +18,10 @@ use Illuminate\Support\Facades\Route;
 // inicio
 Route::get('/','InicioController@index')->name('inicio.index');
 
-// biblioteca
+// contenidos
 Route::get('/inicio/contenidos', 'ContenidosController@index')->name('contenidos.index');
 Route::get('/descargar/{contenido}', 'ContenidosController@download');
+Route::get('/materias/seleccion', 'ContenidosController@seleccion')->name('contenidos.seleccion');
 
 // admin
 Route::get('/admin', 'AdminController@index')->name('admin.index');
@@ -34,6 +35,11 @@ Route::delete('/novedades/{novedad}', 'NovedadesController@destroy')->name('nove
 
 // buscador materias
 Route::get('/buscar', 'ContenidosController@search')->name('buscar.show');
+
+// materiasAdmin
+Route::get('/admin/materias', 'MateriasAdminController@index')->name('materiasAdmin.index');
+Route::get('/admin/materiasCrear', 'MateriasAdminController@create')->name('materiasAdmin.create');
+Route::post('materiasAdmin', 'MateriasAdminController@store')->name('materiasAdmin.store');
 
 
 // admin contenidos
@@ -58,8 +64,13 @@ Route::post('directivos', 'DirectivaController@store')->name('directivaAdmin.sto
 Route::delete('/directivos/{directivo}', 'DirectivaController@destroy')->name('directivaAdmin.destroy');
 
 // admin Biblioteca
-Route::get('/admin/biblioteca', 'BibliotecaController@create')->name('bibliotecaAdmin.create');
+Route::get('/admin/biblioteca', 'BibliotecaController@index')->name('bibliotecaAdmin.index');
+Route::get('/admin/biblioteca/crear', 'BibliotecaController@create')->name('bibliotecaAdmin.create');
 Route::post('bibliotecaAdmin', 'BibliotecaController@store')->name('bibliotecaAdmin.store');
+Route::delete('/admin/biblioteca/{biblioteca}', 'BibliotecaController@destroy')->name('bibliotecaAdmin.destroy');
+
+
+Route::get('/biblioteca', 'Bibliotecainicio@index')->name('biblioteca.index');
 
 // materias
 Route::get('/materias/{materia}', 'MateriaController@show')->name('materias.show');

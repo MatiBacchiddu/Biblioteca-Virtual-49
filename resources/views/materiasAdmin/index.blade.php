@@ -12,40 +12,34 @@
 
     <!-- Main content -->
     <section class="content">
-        <h2 class="text-center mb-5 titulo-contenidos">Administra la Biblioteca</h2>
-
-
+        <h2 class="text-center mb-5 titulo-contenidos">Administra todas las materias</h2>
 
     <div class="col-md-10 mx-auto bg-white p-3">
         <table class="table">
             <thead class="bg-primary text-light">
                 <tr>
-                    <th scole="col">Titulo</th>
-                    <th scole="col">Autor</th>
-                    <th scole="col">Editorial</th>
+                    <th scole="col">Materia</th>
                     <th scole="col">Acciones</th>
 
                 </tr>
             </thead>
             <tbody>
 
-                @foreach($bibliotecas as $biblioteca)
+                @foreach($materias as $materia)
+
 
                 <tr>
-                    <td>{{$biblioteca->titulo}}</td>
-                    <td>{{$biblioteca->autor}}</td>
-                    <td>{{$biblioteca->editorial}}</td>
+                    <td>{{$materia->nombre}}</td>
                     <td>
-                        <form action="{{route('bibliotecaAdmin.destroy', ['biblioteca' => $biblioteca->id])}}" method="POST">
+
+                        <form action="#" method="POST">
                             @csrf
                             @method('DELETE')
-                            <input type="submit" class="btn btn-danger d-block w-100 mb-2" value="Eliminar &times;">
+                        <input type="submit" class="btn btn-danger d-block w-100 mb-2" value="Eliminar &times;">
                         </form>
                     </td>
                 </tr>
-
                 @endforeach
-
 
             </tbody>
         </table>

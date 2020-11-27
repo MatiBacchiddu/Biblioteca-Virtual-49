@@ -24,7 +24,11 @@
       <!-- Default box -->
       <div class="card">
         <div class="card-header">
-          <h3 class="card-title">Eres el administrador</h3>
+        <h3 class="card-title">
+
+            <p>Eres administrador</p>
+
+        </h3>
 
         </div>
         <div class="card-body">

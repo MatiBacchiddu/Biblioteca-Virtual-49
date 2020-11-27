@@ -42,6 +42,17 @@ class ContenidosController extends Controller
     public function download(ContenidosAdmin $contenido){
         return response()->download(public_path('storage/archivos/' . $contenido->archivo));
     }
+
+
+
+    public function seleccion()
+    {
+        //
+        $materias = Materia::all();
+        return view('matselec.seleccion')->with('materias', $materias);
+    }
+
+
     /**
      * Show the form for creating a new resource.
      *

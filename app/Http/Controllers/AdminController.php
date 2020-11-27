@@ -6,6 +6,7 @@ use App\Admin;
 use App\Novedades;
 use GuzzleHttp\Middleware;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class AdminController extends Controller
 {
@@ -24,7 +25,10 @@ class AdminController extends Controller
      */
     public function index()
     {
-        return view('admin.index');
+
+        $user = Auth::user();
+
+        return view('admin.index')->with('user', $user);
     }
 
 
