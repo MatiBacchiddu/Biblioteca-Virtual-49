@@ -41,6 +41,7 @@ class DirectivaController extends Controller
     public function store(Request $request)
     {
         //
+        $directiva = new Directiva();
 
         $data = $request->validate([
             'nombre' => 'required',
@@ -49,17 +50,32 @@ class DirectivaController extends Controller
         ]);
 
 
-       // if($request->hasFile('imagen')){
-         //   $data['imagen'] = $request->file('imagen')->store('uploads', 'public');
-        //}
+            // Verifica si existe una imagen y lo guarda
+        if ($request->hasFile('imagen')) {
 
-        $ruta_imagen = $request['imagen']->store('imagenes', 'public');
+            $imagen = $request->file('imagen');
+            $nombre_imagen = $imagen->getClientOriginalName();
+            $imagen->move(public_path('storage/imagenes'), $nombre_imagen);
+            $directiva->imagen = $nombre_imagen;
+        }
 
-        DB::table('directivas')->insert([
-            'nombre' => $data['nombre'],
-            'cargo' => $data['cargo'],
-            'imagen' => $ruta_imagen,
-        ]);
+
+
+        $directiva->nombre = $request->input('nombre');
+        $directiva->cargo = $request->input('cargo');
+        $directiva->save();
+
+
+       // $imagen = $request->file('imagen');
+        //$imagen->move(public_path('storage/imagenes'));
+
+
+        // inserta a la base de datos
+        //DB::table('directivas')->insert([
+           // 'nombre' => $data['nombre'],
+           // 'cargo' => $data['cargo'],
+           // 'imagen' => $data['imagen'],
+        //]);
 
         return redirect()->action('DirectivaController@index');
     }
@@ -106,8 +122,10 @@ class DirectivaController extends Controller
      */
     public function destroy($id)
     {
-        //
+        // busca el directivo por id
         $directivos = Directiva::findOrFail($id);
+
+        // elimina al directivo
         Directiva::destroy($id);
 
         return view('admin.index');

@@ -44,7 +44,7 @@
     <!-- Materias -->
     <li class="nav-item has-treeview">
         <a href="#" class="nav-link">
-        <i class=" fas fa-book"></i>
+        <i class="fas fa-graduation-cap"></i>
           <p>
             Materias
           </p>
@@ -59,7 +59,7 @@
           <li class="nav-item">
             <a href="#" class="nav-link">
             <i class="fas fa-plus-circle"></i>
-              <p>Agregar archivo</p>
+              <p>Agregar materia</p>
             </a>
           </li>
         </ul>
@@ -73,7 +73,7 @@
     <!-- Categoria contenidos -->
     <li class="nav-item has-treeview">
       <a href="#" class="nav-link">
-      <i class=" fas fa-book"></i>
+        <i class="fas fa-book-reader"></i>
         <p>
           Contenidos
         </p>

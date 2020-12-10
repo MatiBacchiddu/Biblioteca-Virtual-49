@@ -1,7 +1,20 @@
+html {
+    height: 100% !important;
+}
+
+body {
+    display: flex !important;
+    flex-direction: column !important;
+    height: 100% !important;
+}
+
 .footer-mati {
     width: 100%;
+    height: 8.5%;
     margin-top: 5rem;
-
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
 }
 
 .box-mati {
@@ -188,5 +201,15 @@
 .contenedor-materia:hover {
     background-color: #e5e5e5;
     padding: 1rem;
+}
+
+.li-des {
+    color: white;
+}
+
+.header_novedad {
+    margin: 20px;
+    padding: 5px;
+    background-color: #ffb703;
 }
 

@@ -20,15 +20,14 @@
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="{{asset('css/matiestilos.css')}}">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
-    <title>contenidos</title>
+    <title>Hawai</title>
   </head>
   <body>
-
 
     <nav id="header" class="navbar navbar-expand-lg navbar-dark bg-bordo">
         <div class="container">
                     <a class="navbar-brand" href="{{route('contenidos.index')}}">
-                        <i class="far fa-arrow-alt-circle-left"> volver</i>
+                        <i class="far fa-arrow-alt-circle-left"></i> Todos los contenidos
                     </a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -36,53 +35,56 @@
         </div>
     </nav>
 
+
+    <!--Speakers-->
     <section id="speakers" class="mt-4 mb-4">
         <div class="container">
             <div class="row">
                 <div class="col text-center text-uppercase">
-                    <h1 class="font-weight-bold titulo-contenidos">Todas las materias</h1>
+                    <h1 class="font-weight-bold titulo-contenidos">Aquí encontrarás los libros necesarios</h1>
                     <hr class="hr-contenidos">
                 </div>
             </div>
-        </div>
-    </section>
 
-    <section id="novedades">
-        <div class="container">
-            <div class="row">
+            <p class="font-weight-bold">Resultados de la busqueda: <span class="text-uppercase span-buscador">{{$busqueda}}</span></p>
 
-            @if(count($materias) > 0)
-                @foreach($materias as $materia)
-                <div class="col-12 col-md-4 mb-4">
-                    <div class="card">
-                        <div class="card-body contenedor-materia">
-                          <a href="{{route('materias.show', ['materia' => $materia->id])}}" class="link-materia"><h5 class="card-title">{{$materia->nombre}} <br> <small>Ver contenidos</small></h5></a>
+            <div class="buscador">
+                <form action="{{route('buscarlibro.show')}}" class="container h-100">
+                    <div class="row h-100 align-items-center">
+                        <p class="display-4 font-weight-bold texto-buscar">¿Que estas buscando?</p>
+                        <input type="search" name="buscar" class="form-control" placeholder="Ej: Libro de Matematicas avanzadas, etc">
+                    </div>
+                </form>
+            </div>
+                <div class="row">
+                    @if(count($libros) > 0 )
+                        @foreach($libros as $libro)
+                        <div class="col-12 col-md-4 mb-4">
+                            <div class="card card-mati">
+                                <div class="card-body">
+                                <h5 class="card-title text-uppercase font-weight-bold">{{$libro->titulo}}</h5>
+                                <p>Autor: {{$libro->autor}}</p>
+                                <p>Editorial: {{$libro->editorial}}</p>
+                                    <a href="{{ url('descargar/'.$libro->id) }}" class="btn btn-outline-danger"><i class="fas fa-download"></i> Descargar PDF</a>
+                                <br>
+                                <a href="/storage/{{$libro->libro}}" class="btn btn-outline-danger mt-4" target="_blank"><i class="fas fa-eye"></i> Ver PDF</a>
+                                </div>
+                            </div>
                         </div>
-                      </div>
+                        @endforeach
+
+                    @else
+                        <p class="mensaje-if mt-5">No hay bibliotecas aun</p>
+
+                    @endif
+
                 </div>
-            @endforeach
-
-            @else
-                <p class="text-center mt-5">No hay materias</p>
-
-            @endif
-
+            <div class="d-flex justify-content-center mt-5">
+                {{$libros->links()}}
             </div>
         </div>
     </section>
-
-
-
-
-
-       <!-- Footer-->
-       <footer class="footer py-5 mt-6 w-100 footer-mati bg-bordo">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-4 text-lg-left c-white">Copyright © Escuela Secundaria N*49 2020 </div>
-            </div>
-        </div>
-    </footer>
+    <!--Cierre speakers-->
 
 
 

@@ -33,8 +33,13 @@ Route::post('admin', 'NovedadesController@store')->name('novedades.store');
 Route::delete('/novedades/{novedad}', 'NovedadesController@destroy')->name('novedades.destroy');
 
 
-// buscador materias
+// buscador de contenidos
 Route::get('/buscar', 'ContenidosController@search')->name('buscar.show');
+
+// buscador de libros
+Route::get('/buscar/libros', 'BibliotecaInicio@search')->name('buscarlibro.show');
+Route::get('/descargar/{biblioteca}', 'BibliotecaInicio@download');
+
 
 // materiasAdmin
 Route::get('/admin/materias', 'MateriasAdminController@index')->name('materiasAdmin.index');
@@ -74,6 +79,11 @@ Route::get('/biblioteca', 'Bibliotecainicio@index')->name('biblioteca.index');
 
 // materias
 Route::get('/materias/{materia}', 'MateriaController@show')->name('materias.show');
+
+// categorias Admin
+Route::get('/admin/categorias', 'CategoriaController@index')->name('categoriaAdmin.index');
+Route::get('/admin/categoriaCrear', 'CategoriaController@create')->name('categoriaAdmin.create');
+Route::post('categoria', 'CategoriaController@store')->name('categoriaAdmin.store');
 
 Auth::routes();
 

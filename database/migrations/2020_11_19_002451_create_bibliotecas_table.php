@@ -13,12 +13,20 @@ class CreateBibliotecasTable extends Migration
      */
     public function up()
     {
+
+        Schema::create('categorias', function (Blueprint $table) {
+            $table->id();
+            $table->string('nombre');
+        });
+
+
         Schema::create('bibliotecas', function (Blueprint $table) {
             $table->id();
             $table->string('titulo');
             $table->string('autor');
             $table->string('editorial');
             $table->string('libro');
+            $table->foreignId('categoria_id')->constrained()->onDelete('cascade');
         });
     }
 
@@ -30,5 +38,6 @@ class CreateBibliotecasTable extends Migration
     public function down()
     {
         Schema::dropIfExists('bibliotecas');
+        Schema::dropIfExists('categorias');
     }
 }

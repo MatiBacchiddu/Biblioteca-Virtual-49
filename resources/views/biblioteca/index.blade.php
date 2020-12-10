@@ -45,13 +45,15 @@
             </div>
 
             <div class="buscador">
-                <form action="" class="container h-100">
+            <form action="{{route('buscarlibro.show')}}" class="container h-100">
                     <div class="row h-100 align-items-center">
                         <p class="display-4 font-weight-bold texto-buscar titulo-buscar">¿Qué estás buscando?</p>
                         <input type="search" name="buscar" class="form-control" placeholder="Ej: El ocelote">
                     </div>
                 </form>
             </div>
+
+
             <div class="row">
             @if(count($bibliotecas) > 0 )
                 @foreach($bibliotecas as $biblioteca)
@@ -61,9 +63,7 @@
                           <h5 class="card-title text-uppercase font-weight-bold">{{$biblioteca->titulo}}</h5>
                           <p>Autor: {{$biblioteca->autor}}</p>
                           <p>Editorial: {{$biblioteca->editorial}}</p>
-                             <a href="{{ url('descargar/'.$biblioteca->id) }}" class="btn btn-outline-danger"><i class="fas fa-download"></i> Descargar PDF</a>
-                          <br>
-                          <a href="/storage/{{$biblioteca->libro}}" class="btn btn-outline-danger mt-4" target="_blank"><i class="fas fa-eye"></i> Ver PDF</a>
+                          <a href="/storage/{{$biblioteca->libro}}" class="btn btn-outline-danger mt-4" target="_blank"><i class="fas fa-eye"></i> Ver libro</a>
                         </div>
                       </div>
                 </div>
@@ -78,6 +78,16 @@
         </div>
     </section>
     <!--Cierre speakers-->
+
+
+      <!-- Footer-->
+      <footer class="footer py-5 mt-6 w-100 footer-mati bg-bordo">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-4 text-lg-left c-white">Copyright © Escuela Secundaria N*49 2020 </div>
+            </div>
+        </div>
+    </footer>
 
 
 

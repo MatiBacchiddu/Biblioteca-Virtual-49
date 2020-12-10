@@ -10,6 +10,6 @@ class Materia extends Model
 
     public function contenido()
     {
-        return $this->hasMany(ContenidosAdmin::class);
+        return $this->hasMany(ContenidosAdmin::class); // un contenido puede tener muchas materias
     }
 }

@@ -33,8 +33,8 @@
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#novedades">Novedades</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#adm">Administración</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#ubicacion">Ubicación</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contacto">Biblioteca</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger contenido-nav" href="{{url('/inicio/contenidos')}}">Contenidos <span class="cantidad-contenido">{{$contenidos->count()}}</span> </a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{url('/biblioteca')}}">Biblioteca</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger contenido-nav" href="{{url('/inicio/contenidos')}}">Contenidos <span class="">{{---$contenidos->count()---}}</span> </a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contacto">Contacto</a></li>
                     </ul>
                 </div>
@@ -96,7 +96,9 @@
                     @foreach($novedades as $novedad)
                     <div class="col-12 col-md-4 mb-4">
                         <div class="card">
-                            <img src="assets/img/portfolio/01-thumbnail.jpg" class="card-img-top" alt="...">
+                            <div class="header_novedad">
+                                <h3 class="text-center novedad-header">49</h3>
+                            </div>
                             <div class="card-body">
                               <h5 class="card-title">{{$novedad->titulo}}</h5>
                               <p class="card-text">{{$novedad->descripcion}}</p>
@@ -128,7 +130,7 @@
                     @foreach($directivos as $directivo)
                     <div class="col-lg-4">
                         <div class="adm-member">
-                            <img class="mx-auto rounded-circle" src="/storage/{{$directivo->imagen}}" alt="" />
+                            <img class="mx-auto rounded-circle" src="/storage/imagenes/{{$directivo->imagen}}" alt="" />
                             <h4>{{$directivo->nombre}}</h4>
                             <p class="text-muted">{{$directivo->cargo}}</p>
 
@@ -169,12 +171,33 @@
 
 
         <!-- Footer-->
-        <footer class="footer py-5 mt-6 w-100 footer-mati">
-            <div class="container">
+        <footer class="footer py-3 mt-6 w-100 footer-mati bg-bordo">
                 <div class="row align-items-center">
-                    <div class="col-lg-4 text-lg-left">Copyright © Escuela Secundaria N*49 2020 </div>
+                    <div class="c-white">Copyright © Escuela Secundaria N*49 2020 </div>
                 </div>
-            </div>
+
+                <div class="row align-items-center contenedor-desarrolladores">
+
+                    <div class="c-white">Desarrolladores: <br> <small>Alumnos de Programación</small></div>
+                    <ul class="lista-des">
+                        <li class="li-des">
+                            Bacchiddu Matias
+                        </li>
+
+                        <li class="li-des">
+                            Garcia Santiago
+                        </li>
+
+                        <li class="li-des">
+                            Dupuy Tadeo
+                        </li>
+
+                        <li class="li-des">
+                            Martinez Damian
+                        </li>
+                    </ul>
+
+                </div>
         </footer>
 
 
