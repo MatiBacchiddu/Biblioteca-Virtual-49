@@ -9,12 +9,14 @@ body {
 }
 
 .footer-mati {
-    width: 100%;
+    width: 100px;
     height: 8.5%;
     margin-top: 5rem;
     text-align: center;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    bottom: 0 !important;
+    padding: 2.2em;
 }
 
 .box-mati {
@@ -203,6 +205,11 @@ body {
     padding: 1rem;
 }
 
+.lista-des {
+    list-style: none;
+}
+
+
 .li-des {
     color: white;
 }
@@ -212,4 +219,48 @@ body {
     padding: 5px;
     background-color: #ffb703;
 }
+
+.span-biblioteca {
+    font-weight: bold;
+}
+
+.contenedor-mapa {
+    width: 100%;
+}
+
+/* desktop first empezar en el MQ mas grande */
+@media screen and (max-width: 1024px) {
+    .container {
+      padding: 0 1em;
+    }
+
+    h1{
+      font-size: 2em;
+      z-index: 2;
+    }
+  }
+
+@media screen and (max-width: 766px) {
+    .footer-mati {
+        display: block;
+        flex-direction: column;
+    }
+
+    .m-copyright {
+        justify-content: center;
+        font-size: 0.75rem;
+    }
+
+    .lista-des {
+        margin: 0 auto;
+        margin-bottom: 1rem;
+
+    }
+
+    .li-des {
+        font-size: 0.75rem;
+    }
+
+}
+
 

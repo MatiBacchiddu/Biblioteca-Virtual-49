@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Categoria;
+use App\Biblioteca;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -60,6 +61,16 @@ class CategoriaController extends Controller
             return redirect()->action('CategoriaController@create');
     }
 
+
+
+    public function seleccion()
+    {
+        //
+        $categorias = Categoria::all();
+        return view('catselec.seleccion')->with('categorias', $categorias);
+    }
+
+
     /**
      * Display the specified resource.
      *
@@ -69,6 +80,10 @@ class CategoriaController extends Controller
     public function show(Categoria $categoria)
     {
         //
+        $libros = Biblioteca::where('categoria_id', $categoria->id)->paginate(10);
+
+        return view('categorias.show', compact('categoria', 'libros'));
+
     }
 
     /**

@@ -36,7 +36,7 @@
             <a class="nav-link rayitas" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
           </li>
           <li class="nav-item d-none d-sm-inline-block">
-            <a href="{{url('/inicio')}}" class="btn cerrar">Cerrar Sesión</a>
+            <a href="{{url('/')}}" class="btn cerrar">Cerrar Sesión</a>
           </li>
         </ul>
       </nav>

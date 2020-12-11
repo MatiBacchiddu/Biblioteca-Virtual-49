@@ -51,13 +51,13 @@
         </a>
         <ul class="nav nav-treeview">
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="{{url('/admin/materias')}}" class="nav-link">
             <i class="fas fa-list"></i>
               <p>Ver Todos</p>
             </a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="{{url('/admin/materiasCrear')}}" class="nav-link">
             <i class="fas fa-plus-circle"></i>
               <p>Agregar materia</p>
             </a>
@@ -93,7 +93,34 @@
         </li>
       </ul>
     </li>
-    <!--cierre de Categorias-->
+    <!--cierre de contenidos-->
+
+
+
+    <!-- Categoria biblioteca -->
+    <li class="nav-item has-treeview">
+        <a href="#" class="nav-link">
+        <i class="fas fa-graduation-cap"></i>
+          <p>
+            Categorias para Biblioteca
+          </p>
+        </a>
+        <ul class="nav nav-treeview">
+          <li class="nav-item">
+            <a href="{{url('/admin/categorias')}}" class="nav-link">
+            <i class="fas fa-list"></i>
+              <p>Ver Todas</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="{{url('/admin/categoriaCrear')}}" class="nav-link">
+            <i class="fas fa-plus-circle"></i>
+              <p>Agregar categoria</p>
+            </a>
+          </li>
+        </ul>
+      </li>
+      <!-- Categoria biblioteca -->
 
 
 

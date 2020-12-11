@@ -49,6 +49,21 @@ class="max-w-lg mx-auto my-10">
       <input type="file" name="libro" class="form-control">
     </div>
 
+    <div class="form-group ml-5 mr-5">
+        <label for="categoria_id">Categoria del Libro</label>
+        <select class="form-control" name="categoria_id" id="categoria_id">
+          <option disable selected>-- Selecciona --</option>
+                @foreach($categorias as $categoria)
+                    <option
+                    {{old('categoria') == $categoria->id ? 'selected' : ''}}
+                    value="{{$categoria->id}}">
+                        {{$categoria->nombre}}
+                    </option>
+
+                @endforeach
+        </select>
+      </div>
+
 
 
   <button type="submit" class="btn btn-primary ml-5">Subir</button>

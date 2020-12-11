@@ -2,12 +2,19 @@
 
 namespace App\Http\Controllers;
 
+use App\Categoria;
 use App\Biblioteca;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
 class BibliotecaController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware('auth'); // proteger autenticacion
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -29,7 +36,8 @@ class BibliotecaController extends Controller
     public function create()
     {
         //
-        return view('bibliotecaAdmin.create');
+        $categorias = Categoria::all();
+        return view('bibliotecaAdmin.create')->with('categorias', $categorias);
     }
 
     /**

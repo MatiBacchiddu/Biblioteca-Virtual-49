@@ -30,15 +30,11 @@
                     <a class="navbar-brand" href="{{route('inicio.index')}}">
                         <i class="far fa-arrow-alt-circle-left"> Inicio</i>
                     </a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                    </button>
 
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ml-auto">
                         <a class="nav-link hover materia-hover active font-weight-bold" href="{{route('contenidos.seleccion')}}">Toca aqui para ver todas las materias</a>
                     </ul>
-                </div>
+
         </div>
     </nav>
 
@@ -89,18 +85,6 @@
         </div>
     </section>
     <!--Cierre speakers-->
-
-
-       <!-- Footer-->
-       <footer class="footer py-5 mt-6 w-100 footer-mati bg-bordo">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-4 text-lg-left c-white">Copyright © Escuela Secundaria N*49 2020 </div>
-            </div>
-        </div>
-    </footer>
-
-
 
 
 <!-- Optional JavaScript -->

@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>categorias</title>
+    <title>contenidos</title>
 </head>
 <body>
 
     <!doctype html>
-<html lang="es">
+<html lang="en">
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -20,14 +20,14 @@
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="{{asset('css/matiestilos.css')}}">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
-    <title>materias</title>
+    <title>categorias</title>
   </head>
   <body>
 
 
     <nav id="header" class="navbar navbar-expand-lg navbar-dark bg-bordo">
         <div class="container">
-                    <a class="navbar-brand" href="{{route('contenidos.index')}}">
+                    <a class="navbar-brand" href="{{route('biblioteca.index')}}">
                         <i class="far fa-arrow-alt-circle-left"> volver</i>
                     </a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -40,7 +40,7 @@
         <div class="container">
             <div class="row">
                 <div class="col text-center text-uppercase">
-                    <h1 class="font-weight-bold titulo-contenidos">Todas las materias</h1>
+                    <h1 class="font-weight-bold titulo-contenidos">Todas las categorias</h1>
                     <hr class="hr-contenidos">
                 </div>
             </div>
@@ -51,12 +51,12 @@
         <div class="container">
             <div class="row">
 
-            @if(count($materias) > 0)
-                @foreach($materias as $materia)
+            @if(count($categorias) > 0)
+                @foreach($categorias as $categoria)
                 <div class="col-12 col-md-4 mb-4">
                     <div class="card">
                         <div class="card-body contenedor-materia">
-                          <a href="{{route('materias.show', ['materia' => $materia->id])}}" class="link-materia"><h5 class="card-title">{{$materia->nombre}} <br> <small>Ver contenidos</small></h5></a>
+                          <a href="{{route('categorias.show', ['categoria' => $categoria->id])}}" class="link-materia"><h5 class="card-title">{{$categoria->nombre}} <br> <small>Ver libros de esta categoria</small></h5></a>
                         </div>
                       </div>
                 </div>
@@ -70,6 +70,7 @@
             </div>
         </div>
     </section>
+
 
 
 

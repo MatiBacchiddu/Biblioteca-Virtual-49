@@ -147,38 +147,45 @@
 
         <!-- Contacto-->
 
-        <section class="page-section box-mati" id="contacto">
-            <div class="container">
+    <section class="page-section box-mati" id="contacto">
+
+        <div class="container">
+
                 <div class="text-center">
                     <h2 class="section-heading text-uppercase titulo-contactanos">Contactanos</h2>
-                  <h3 class="section-subheading text-uppercase email-contactanos"> Email : <span class="span-contactanos">secundarian49moron@correo.com</span></h3>
-                  <h3 class="section-subheading text-uppercase telefono-contactanos"> Teléfono: (011) 1234-5678 </h3>
+                    <h3 class="section-subheading text-uppercase email-contactanos"> Email : <span class="span-contactanos">secundarian49moron@correo.com</span></h3>
+                    <h3 class="section-subheading text-uppercase telefono-contactanos"> Teléfono: (011) 1234-5678 </h3>
                 </div>
 
             <section class="page-section" id="ubicacion">
+
                 <div class="container">
+
                     <div class="text-center">
-                    <h2 class="section-heading text-uppercase titulo-ubicacion">Ubicación</h2></div>
+                        <h2 class="section-heading text-uppercase titulo-ubicacion">Ubicación</h2>
+                    </div>
 
-                <div class="map" id="map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3282.323868677951!2d-58.61923039999999!3d-34.646522918169026!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf6ff348cdcdac80f!2sEscuela%20N%C3%BAmero%203!5e0!3m2!1ses-419!2sar!4v1599510861539!5m2!1ses-419!2sar"
-                width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                    <div class="map contenedor-mapa" id="map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3282.323868677951!2d-58.61923039999999!3d-34.646522918169026!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf6ff348cdcdac80f!2sEscuela%20N%C3%BAmero%203!5e0!3m2!1ses-419!2sar!4v1599510861539!5m2!1ses-419!2sar"
+                        width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                    </div>
+
                 </div>
 
-                </div>
             </section>
-            </section></div>
+
+        </div>
+
+    </section>
 
 
         <!-- Footer-->
         <footer class="footer py-3 mt-6 w-100 footer-mati bg-bordo">
-                <div class="row align-items-center">
-                    <div class="c-white">Copyright © Escuela Secundaria N*49 2020 </div>
-                </div>
+
 
                 <div class="row align-items-center contenedor-desarrolladores">
 
-                    <div class="c-white">Desarrolladores: <br> <small>Alumnos de Programación</small></div>
+                    <div class="c-white">Desarrolladores: <br> <small>Alumnos de Programación (Chacabuco)</small></div>
                     <ul class="lista-des">
                         <li class="li-des">
                             Bacchiddu Matias
@@ -198,6 +205,12 @@
                     </ul>
 
                 </div>
+
+
+                <div class="row align-items-center m-copyright">
+                    <div class="c-white ">Copyright © Escuela Secundaria N*49 2020 </div>
+                </div>
+
         </footer>
 
 

@@ -17,18 +17,18 @@ class UserSeed extends Seeder
         //
 
         DB::table('users')->insert([
-            'name' => 'Matias',
-            'email' => 'correo@correo.com',
+            'name' => 'Administrador',
+            'email' => 'administrador49@admin.com',
             'email_verified_at' => Carbon::now(),
-            'password' => Hash::make('12345678'),
+            'password' => Hash::make('49csmoron'),
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now(),
         ]);
 
 
         DB::table('users')->insert([
-            'name' => 'Camilo',
-            'email' => 'correo2@correo.com',
+            'name' => 'Desarrollador Supremo',
+            'email' => 'matiasdanielbacchiddu@gmail.com',
             'email_verified_at' => Carbon::now(),
             'password' => Hash::make('12345678'),
             'created_at' => Carbon::now(),
