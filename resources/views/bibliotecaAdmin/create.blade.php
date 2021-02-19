@@ -3,9 +3,6 @@
 
 @include('navAdmin.nav');
 
-
-
-
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
 <!-- Content Header (Page header) -->
@@ -64,17 +61,12 @@ class="max-w-lg mx-auto my-10">
         </select>
       </div>
 
-
-
   <button type="submit" class="btn btn-primary ml-5">Subir</button>
 
-
 </form>
-
 
 <!-- /.content -->
 </div>
 <!-- /.content-wrapper -->
-
 
 @include('navAdmin.footer');

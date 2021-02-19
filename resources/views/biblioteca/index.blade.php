@@ -61,7 +61,7 @@
                           <p>Autor: {{$biblioteca->autor}}</p>
                           <p>Editorial: {{$biblioteca->editorial}}</p>
                           <p>Categoria: <span class="span-biblioteca">{{$biblioteca->categoria->nombre}}</span></p>
-                          <a href="/storage/{{$biblioteca->libro}}" class="btn btn-outline-danger mt-4" target="_blank"><i class="fas fa-eye"></i> Ver libro</a>
+                          <a href="/storage/libros/{{$biblioteca->libro}}" class="btn btn-outline-danger mt-4" target="_blank"><i class="fas fa-eye"></i> Ver libro</a>
                         </div>
                       </div>
                 </div>

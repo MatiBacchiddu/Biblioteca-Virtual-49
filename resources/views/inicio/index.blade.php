@@ -78,6 +78,9 @@
 
 
 
+
+
+
         {{--Novedades--}}
         <section class="page-section bg-light" id="novedades">
             <div class="container">
@@ -177,44 +180,6 @@
         </div>
 
     </section>
-
-
-        <!-- Footer-->
-        <footer class="footer py-3 mt-6 w-100 footer-mati bg-bordo">
-
-
-                <div class="row align-items-center contenedor-desarrolladores">
-
-                    <div class="c-white">Desarrolladores: <br> <small>Alumnos de Programación (Chacabuco)</small></div>
-                    <ul class="lista-des">
-                        <li class="li-des">
-                            Bacchiddu Matias
-                        </li>
-
-                        <li class="li-des">
-                            Garcia Santiago
-                        </li>
-
-                        <li class="li-des">
-                            Dupuy Tadeo
-                        </li>
-
-                        <li class="li-des">
-                            Martinez Damian
-                        </li>
-                    </ul>
-
-                </div>
-
-
-                <div class="row align-items-center m-copyright">
-                    <div class="c-white ">Copyright © Escuela Secundaria N*49 2020 </div>
-                </div>
-
-        </footer>
-
-
-
         <!-- Bootstrap core JS-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>

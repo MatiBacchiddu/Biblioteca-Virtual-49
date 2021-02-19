@@ -55,14 +55,12 @@ class ContenidosAdminController extends Controller
     public function store(Request $request)
     {
         //
-
         $data = $request->validate([
             'nombre' => 'required',
             'años' => 'required',
             'archivo' => 'required',
             'materia' => 'required'
         ]);
-
           // $ruta_archivo = $request->file('archivo')->store('public');
 
         $archivo = $request->file('archivo');

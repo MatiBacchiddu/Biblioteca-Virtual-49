@@ -6,6 +6,7 @@ use App\Categoria;
 use App\Biblioteca;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\File;
 
 class BibliotecaController extends Controller
 {
@@ -49,44 +50,29 @@ class BibliotecaController extends Controller
     public function store(Request $request)
     {
         //
-        /*$data = $request->validate([
+        $data = $request->validate([
             'titulo' => 'required',
             'autor' => 'required',
+            'libro' => 'required',
             'editorial' => 'required',
-        ]);*/
+            'categoria_id' => 'required'
+        ]);
 
-        $datosLibro = request()->except('_token');
+                $libro = $request->file('libro');
 
+                $nombre_libro = $libro->getClientOriginalName();
+        
+                $libro->move(public_path('storage/libros'), $nombre_libro);
 
-        /*$libro = $request->file('libro');
-
-        $nombre_libro = $libro->getClientOriginalName();*/
-
-
-
-
-
-
-           /* DB::table('bibliotecas')->insert([
+             DB::table('bibliotecas')->insert([
                     'titulo' => $data['titulo'],
                     'autor' => $data['autor'],
                     'editorial' => $data['editorial'],
-                ]);*/
-
-
-
-
-
-            if($request->hasFile('libro')) {
-                $datosLibro['libro'] = $request->file('libro')->store('libros', 'public');
-            }
-
-            Biblioteca::insert($datosLibro);
+                    'libro' => $nombre_libro,
+                    'categoria_id' => $data['categoria_id']
+                ]);
 
             return redirect()->action('BibliotecaController@index');
-
-
-
 
     }
 
@@ -136,7 +122,16 @@ class BibliotecaController extends Controller
     public function destroy(Biblioteca $biblioteca)
     {
         //
+        File::delete('storage/libros/' . $biblioteca->libro);
         Biblioteca::destroy($biblioteca->id);
         return redirect()->action('BibliotecaController@index');
     }
 }
+
+
+// public function destroy(ContenidosAdmin $contenido)
+// {
+//     File::delete('storage/archivos/' . $contenido->archivo);
+//     ContenidosAdmin::destroy($contenido->id);
+//     return redirect()->action('ContenidosAdminController@index');
+// }

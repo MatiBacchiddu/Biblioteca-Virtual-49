@@ -8,17 +8,6 @@ body {
     height: 100% !important;
 }
 
-.footer-mati {
-    width: 100px;
-    height: 8.5%;
-    margin-top: 5rem;
-    text-align: center;
-    display: flex;
-    justify-content: space-between;
-    bottom: 0 !important;
-    padding: 2.2em;
-}
-
 .box-mati {
     --webkit-box-shadow: 0px -2px 19px 7px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 0px -2px 19px 7px rgba(0, 0, 0, 0.75);
@@ -261,6 +250,21 @@ body {
         font-size: 0.75rem;
     }
 
+}
+
+.contenedor-footer {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    /* position: absolute;
+    bottom: 0; */
+}
+
+.contenedor-footer .contenedor-desarrolladores {
+    display: flex;
+    flex-direction: column;
 }
 
 
