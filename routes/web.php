@@ -87,7 +87,7 @@ Route::post('categoria', 'CategoriaController@store')->name('categoriaAdmin.stor
 
 Route::get('/categoria/seleccion', 'CategoriaInicioController@seleccion')->name('categorias.seleccion');
 
-Route::get('/categorias/{categoria}', 'CategoriaController@show')->name('categorias.show');
+Route::get('/categorias/{categoria}', 'CategoriaInicioController@show')->name('categorias.show');
 
 Auth::routes();
 

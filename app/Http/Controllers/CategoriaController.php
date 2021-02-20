@@ -61,30 +61,13 @@ class CategoriaController extends Controller
             return redirect()->action('CategoriaController@create');
     }
 
-
-
-    public function seleccion()
-    {
-        //
-        $categorias = Categoria::all();
-        return view('catselec.seleccion')->with('categorias', $categorias);
-    }
-
-
     /**
      * Display the specified resource.
      *
      * @param  \App\Categoria  $categoria
      * @return \Illuminate\Http\Response
      */
-    public function show(Categoria $categoria)
-    {
-        //
-        $libros = Biblioteca::where('categoria_id', $categoria->id)->paginate(10);
-
-        return view('categorias.show', compact('categoria', 'libros'));
-
-    }
+    
 
     /**
      * Show the form for editing the specified resource.

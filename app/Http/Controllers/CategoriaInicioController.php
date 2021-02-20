@@ -15,4 +15,13 @@ class CategoriaInicioController extends Controller
         return view('catselec.seleccion')->with('categorias', $categorias);
     }
 
+    public function show(Categoria $categoria)
+    {
+        //
+        $libros = Biblioteca::where('categoria_id', $categoria->id)->paginate(10);
+
+        return view('categorias.show', compact('categoria', 'libros'));
+
+    }
+
 }
