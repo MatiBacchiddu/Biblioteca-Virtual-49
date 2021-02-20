@@ -48,14 +48,6 @@
 
             <p class="font-weight-bold">Resultados de la busqueda: <span class="text-uppercase span-buscador">{{$busqueda ?? ''}}</span></p>
 
-            <div class="buscador">
-                <form action="{{route('buscarlibro.show')}}" class="container h-100">
-                    <div class="row h-100 align-items-center">
-                        <p class="display-4 font-weight-bold texto-buscar">¿Que estas buscando?</p>
-                        <input type="search" name="buscar" class="form-control" placeholder="Ej: Libro de Matematicas avanzadas, etc">
-                    </div>
-                </form>
-            </div>
                 <div class="row">
                     @if(count($libros) > 0 )
                         @foreach($libros as $libro)

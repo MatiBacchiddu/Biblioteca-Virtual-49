@@ -23,6 +23,8 @@ Route::get('/inicio/contenidos', 'ContenidosController@index')->name('contenidos
 Route::get('/descargar/{contenido}', 'ContenidosController@download');
 Route::get('/materias/seleccion', 'ContenidosController@seleccion')->name('contenidos.seleccion');
 
+Route::get('/descargar/{biblioteca}', 'BibliotecaInicio@download');
+
 // admin
 Route::get('/admin', 'AdminController@index')->name('admin.index');
 

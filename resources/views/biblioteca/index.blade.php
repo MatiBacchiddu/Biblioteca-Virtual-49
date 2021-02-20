@@ -41,16 +41,6 @@
                 </div>
             </div>
 
-            <div class="buscador">
-            <form action="{{route('buscarlibro.show')}}" class="container h-100">
-                    <div class="row h-100 align-items-center">
-                        <p class="display-4 font-weight-bold texto-buscar titulo-buscar">¿Qué estás buscando?</p>
-                        <input type="search" name="buscar" class="form-control" placeholder="Ej: El ocelote">
-                    </div>
-                </form>
-            </div>
-
-
             <div class="row">
             @if(count($bibliotecas) > 0 )
                 @foreach($bibliotecas as $biblioteca)
@@ -68,7 +58,7 @@
                 @endforeach
 
             @else
-                <p class="mensaje-if mt-5">No hay bibliotecas aun</p>
+                <p class="mensaje-if mt-5">No hay libros</p>
 
             @endif
 
