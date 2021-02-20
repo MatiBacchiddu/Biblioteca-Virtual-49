@@ -13,8 +13,6 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-
 // inicio
 Route::get('/','InicioController@index')->name('inicio.index');
 
@@ -34,7 +32,6 @@ Route::get('admin/novedades', 'NovedadesController@index')->name('novedades.inde
 Route::post('admin', 'NovedadesController@store')->name('novedades.store');
 Route::delete('/novedades/{novedad}', 'NovedadesController@destroy')->name('novedades.destroy');
 
-
 // buscador de contenidos
 Route::get('/buscar', 'ContenidosController@search')->name('buscar.show');
 
@@ -42,19 +39,17 @@ Route::get('/buscar', 'ContenidosController@search')->name('buscar.show');
 Route::get('/buscar/libros', 'BibliotecaInicio@search')->name('buscarlibro.show');
 Route::get('/descargar/{biblioteca}', 'BibliotecaInicio@download');
 
-
 // materiasAdmin
 Route::get('/admin/materias', 'MateriasAdminController@index')->name('materiasAdmin.index');
 Route::get('/admin/materiasCrear', 'MateriasAdminController@create')->name('materiasAdmin.create');
 Route::post('materiasAdmin', 'MateriasAdminController@store')->name('materiasAdmin.store');
-
+Route::delete('/admin/materias/{materia}', 'MateriasAdminController@destroy')->name('materiasAdmin.destroy');
 
 // admin contenidos
 Route::get('/admin/contenidos', 'ContenidosAdminController@create')->name('contenidosAdmin.create');
 Route::get('/admin/contenidosTodos', 'ContenidosAdminController@index')->name('contenidosAdmin.index');
 Route::post('contenidosAdmin', 'ContenidosAdminController@store')->name('contenidosAdmin.store');
 Route::delete('/contenidos/{contenido}', 'ContenidosAdminController@destroy')->name('contenidosAdmin.destroy');
-
 
 // Admin Historia
 Route::get('admin/historiaCrear', 'HistoriaController@create')->name('historiaAdmin.create');
@@ -76,9 +71,7 @@ Route::get('/admin/biblioteca/crear', 'BibliotecaController@create')->name('bibl
 Route::post('bibliotecaAdmin', 'BibliotecaController@store')->name('bibliotecaAdmin.store');
 Route::delete('/admin/biblioteca/{biblioteca}', 'BibliotecaController@destroy')->name('bibliotecaAdmin.destroy');
 
-
 Route::get('/biblioteca', 'Bibliotecainicio@index')->name('biblioteca.index');
-
 // materias
 Route::get('/materias/{materia}', 'MateriaController@show')->name('materias.show');
 
@@ -86,12 +79,12 @@ Route::get('/materias/{materia}', 'MateriaController@show')->name('materias.show
 Route::get('/admin/categorias', 'CategoriaController@index')->name('categoriaAdmin.index');
 Route::get('/admin/categoriaCrear', 'CategoriaController@create')->name('categoriaAdmin.create');
 Route::post('categoria', 'CategoriaController@store')->name('categoriaAdmin.store');
+Route::delete('/admin/categoria/{categoria}', 'CategoriaController@destroy')->name('categoriaAdmin.destroy');
 
 Route::get('/categoria/seleccion', 'CategoriaInicioController@seleccion')->name('categorias.seleccion');
 
 Route::get('/categorias/{categoria}', 'CategoriaInicioController@show')->name('categorias.show');
 
 Auth::routes();
-
 
 Route::get('/home', 'HomeController@index')->name('home');

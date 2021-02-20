@@ -63,7 +63,7 @@
             @endforeach
 
             @else
-                <p class="text-center mt-5">No hay materias</p>
+                <p class="text-center mt-5">No hay categorias</p>
 
             @endif
 

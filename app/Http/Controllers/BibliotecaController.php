@@ -61,7 +61,7 @@ class BibliotecaController extends Controller
                 $libro = $request->file('libro');
 
                 $nombre_libro = $libro->getClientOriginalName();
-        
+
                 $libro->move(public_path('storage/libros'), $nombre_libro);
 
              DB::table('bibliotecas')->insert([
@@ -119,9 +119,16 @@ class BibliotecaController extends Controller
      * @param  \App\Biblioteca  $biblioteca
      * @return \Illuminate\Http\Response
      */
+    // public function destroy(Request $request)
     public function destroy(Biblioteca $biblioteca)
     {
+
+        // $bibliotecas = Biblioteca::findOrFail($id);
+        // File::delete('storage/libros/' . $biblioteca->libro);
+        // Biblioteca::destroy($id);
         //
+        // $id = $request->input('id');
+        // Biblioteca::find($id)->delete();
         File::delete('storage/libros/' . $biblioteca->libro);
         Biblioteca::destroy($biblioteca->id);
         return redirect()->action('BibliotecaController@index');

@@ -55,5 +55,12 @@ class MateriasAdminController extends Controller
 
     }
 
+    public function destroy($id)
+    {
+        $materias = Materia::findOrFail($id);
+        Materia::destroy($id);
+        return view('admin.index');
+    }
+
 
 }

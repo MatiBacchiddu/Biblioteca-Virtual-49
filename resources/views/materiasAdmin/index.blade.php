@@ -26,13 +26,10 @@
             <tbody>
 
                 @foreach($materias as $materia)
-
-
                 <tr>
                     <td>{{$materia->nombre}}</td>
                     <td>
-
-                        <form action="#" method="POST">
+                        <form action="{{route('materiasAdmin.destroy', ['materia' => $materia->id])}}" method="POST">
                             @csrf
                             @method('DELETE')
                         <input type="submit" class="btn btn-danger d-block w-100 mb-2" value="Eliminar &times;">

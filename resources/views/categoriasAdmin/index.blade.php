@@ -32,10 +32,10 @@
                     <td>{{$categoria->nombre}}</td>
                     <td>
 
-                        <form action="#" method="POST">
+                        <form action="{{route('categoriaAdmin.destroy', ['categoria' => $categoria->id])}}" method="POST">
                             @csrf
                             @method('DELETE')
-                        <input type="submit" class="btn btn-danger d-block w-100 mb-2" value="Eliminar &times;">
+                            <input type="submit" class="btn btn-danger d-block w-100 mb-2" value="Eliminar &times;">
                         </form>
                     </td>
                 </tr>

@@ -124,10 +124,8 @@ class DirectivaController extends Controller
     {
         // busca el directivo por id
         $directivos = Directiva::findOrFail($id);
-
         // elimina al directivo
         Directiva::destroy($id);
-
         return view('admin.index');
     }
 }
