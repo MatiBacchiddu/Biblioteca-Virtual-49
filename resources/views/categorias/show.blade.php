@@ -58,7 +58,7 @@
                                 <p>Autor: {{$libro->autor}}</p>
                                 <p>Editorial: {{$libro->editorial}}</p>
                                 <p>Categoria: <span class="span-biblioteca">{{$libro->categoria->nombre}}</span></p>
-                                <a href="/storage/{{$libro->libro}}" class="btn btn-outline-danger mt-4" target="_blank"><i class="fas fa-eye"></i> Ver PDF</a>
+                                <a href="/storage/libros/{{$libro->libro}}" class="btn btn-outline-danger mt-4" target="_blank"><i class="fas fa-eye"></i> Ver PDF</a>
                                 </div>
                             </div>
                         </div>
